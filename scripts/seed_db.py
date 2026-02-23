@@ -1,16 +1,12 @@
 import json
 import os
-import sys
-
-# Add parent dir to path so we can import app modules
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from app.database import Base
-from app.models import Brand, Category, ProxyService, Retailer
-from app.config import settings
+from tokyoradar_shared.database import Base
+from tokyoradar_shared.models import Brand, Category, ProxyService, Retailer
+from tokyoradar_shared.config import settings
 
 
 def load_json(filename):

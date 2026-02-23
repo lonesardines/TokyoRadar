@@ -29,7 +29,9 @@ services:
 
   backend:
     image: tokyoradar-backend
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-tokyoradar}:${POSTGRES_PASSWORD:-changeme}@db:5432/${POSTGRES_DB:-tokyoradar}
       REDIS_URL: redis://redis:6379/0
@@ -44,13 +46,29 @@ services:
       redis:
         condition: service_healthy
 
-  worker:
-    image: tokyoradar-backend
-    build: ./backend
-    command: celery -A app.tasks worker --loglevel=info
+  scraper-worker:
+    image: tokyoradar-scraper
+    build:
+      context: .
+      dockerfile: scraper/Dockerfile
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-tokyoradar}:${POSTGRES_PASSWORD:-changeme}@db:5432/${POSTGRES_DB:-tokyoradar}
       REDIS_URL: redis://redis:6379/0
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  ai-worker:
+    image: tokyoradar-ai
+    build:
+      context: .
+      dockerfile: ai_pipeline/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tokyoradar}:${POSTGRES_PASSWORD:-changeme}@db:5432/${POSTGRES_DB:-tokyoradar}
+      REDIS_URL: redis://redis:6379/0
+      DASHSCOPE_API_KEY: ${DASHSCOPE_API_KEY:-}
     depends_on:
       db:
         condition: service_healthy

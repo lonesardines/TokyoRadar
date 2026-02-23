@@ -19,14 +19,15 @@ docker_compose(
 # ----------------------------------------------------------
 docker_build(
     'tokyoradar-backend',
-    context='./backend',
+    context='.',
     dockerfile='./backend/Dockerfile',
-    only=['./'],
+    only=['./backend/', './shared/'],
     live_update=[
         sync('./backend/', '/app/'),
+        sync('./shared/', '/shared/'),
         run(
-            'pip install -r requirements.txt',
-            trigger=['./backend/requirements.txt'],
+            'pip install /shared && pip install -r requirements.txt',
+            trigger=['./backend/requirements.txt', './shared/pyproject.toml'],
         ),
     ],
 )
@@ -73,7 +74,7 @@ dc_resource('redis', labels=['infra'])
 # 手动任务 (Tilt 面板中点击按钮触发)
 # ----------------------------------------------------------
 local_resource('migrate',
-    cmd='docker compose -p tokyoradar exec -T backend alembic upgrade head',
+    cmd='docker compose -p tokyoradar exec -T backend sh -c "cd /migrations && alembic upgrade head"',
     resource_deps=['backend'],
     labels=['tasks'],
     auto_init=False,
@@ -81,7 +82,7 @@ local_resource('migrate',
 )
 
 local_resource('autogenerate-migration',
-    cmd='docker compose -p tokyoradar exec -T backend alembic revision --autogenerate -m "auto"',
+    cmd='docker compose -p tokyoradar exec -T backend sh -c "cd /migrations && alembic revision --autogenerate -m \'auto\'"',
     resource_deps=['backend'],
     labels=['tasks'],
     auto_init=False,

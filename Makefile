@@ -1,4 +1,4 @@
-.PHONY: dev up down logs migrate seed shell db-shell backup test lint
+.PHONY: dev up down logs migrate makemigrations seed shell db-shell backup test lint
 
 dev:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
@@ -13,10 +13,10 @@ logs:
 	docker compose logs -f
 
 migrate:
-	docker compose exec backend alembic upgrade head
+	docker compose exec backend sh -c "cd /migrations && alembic upgrade head"
 
 makemigrations:
-	docker compose exec backend alembic revision --autogenerate -m "$(msg)"
+	docker compose exec backend sh -c "cd /migrations && alembic revision --autogenerate -m '$(msg)'"
 
 seed:
 	docker compose exec backend python -m scripts.seed_db

@@ -9,11 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY shared/ /shared/
 RUN pip install --no-cache-dir /shared
 
-COPY backend/requirements.txt .
+COPY scraper/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY backend/ /app/
+COPY scraper/ /app/scraper/
 
-EXPOSE 8000
-
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["celery", "-A", "scraper.celery_app", "worker", "--loglevel=info", "-Q", "scraper"]
