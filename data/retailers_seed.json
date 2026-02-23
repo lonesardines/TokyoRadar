@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "ssense",
+    "name": "SSENSE",
+    "website": "https://www.ssense.com",
+    "country": "Canada",
+    "ships_to_us": true,
+    "shipping_tier": "green",
+    "supported_proxies": [],
+    "payment_methods": ["credit_card", "paypal", "apple_pay"],
+    "description_en": "Montreal-based luxury fashion platform carrying a wide range of Japanese designers including Comme des Garcons, sacai, BAPE, Undercover, and NEEDLES. Known for strong editorial content, competitive pricing during sales, and reliable international shipping. One of the best single destinations for Japanese fashion outside Japan."
+  },
+  {
+    "slug": "end-clothing",
+    "name": "END.",
+    "website": "https://www.endclothing.com",
+    "country": "United Kingdom",
+    "ships_to_us": true,
+    "shipping_tier": "green",
+    "supported_proxies": [],
+    "payment_methods": ["credit_card", "paypal", "apple_pay", "klarna"],
+    "description_en": "Newcastle-based global fashion retailer with strong Japanese brand representation spanning streetwear, workwear, and outdoor categories. Carries NEIGHBORHOOD, WTAPS, Wacko Maria, nanamica, orSlow, and many more. Reliable US shipping with duties calculated at checkout."
+  },
+  {
+    "slug": "mr-porter",
+    "name": "Mr Porter",
+    "website": "https://www.mrporter.com",
+    "country": "United Kingdom",
+    "ships_to_us": true,
+    "shipping_tier": "green",
+    "supported_proxies": [],
+    "payment_methods": ["credit_card", "paypal", "apple_pay"],
+    "description_en": "The leading global luxury menswear platform, carrying premium Japanese labels including sacai, Engineered Garments, nanamica, Snow Peak, and Hender Scheme. Exceptional packaging, easy returns, and editorial content that provides context for each brand's significance."
+  },
+  {
+    "slug": "farfetch",
+    "name": "Farfetch",
+    "website": "https://www.farfetch.com",
+    "country": "Global",
+    "ships_to_us": true,
+    "shipping_tier": "green",
+    "supported_proxies": [],
+    "payment_methods": ["credit_card", "paypal", "apple_pay"],
+    "description_en": "Global luxury marketplace connecting boutiques worldwide. Excellent for sourcing rare Japanese designer pieces from boutiques in Tokyo, Paris, and Milan. Carries Comme des Garcons, Yohji Yamamoto, Junya Watanabe, AMBUSH, and many others. Prices vary by boutique."
+  },
+  {
+    "slug": "dover-street-market",
+    "name": "Dover Street Market",
+    "website": "https://www.doverstreetmarket.com",
+    "country": "United States",
+    "ships_to_us": true,
+    "shipping_tier": "green",
+    "supported_proxies": [],
+    "payment_methods": ["credit_card", "apple_pay"],
+    "description_en": "Rei Kawakubo's multi-brand retail concept with locations in New York, Los Angeles, London, Tokyo, Singapore, and Beijing. The definitive stockist for Comme des Garcons and its family of labels including Junya Watanabe, Noir, and CDG Play. Also carries visvim, kolor, and other top Japanese brands."
+  },
+  {
+    "slug": "matches-fashion",
+    "name": "Matches Fashion",
+    "website": "https://www.matchesfashion.com",
+    "country": "United Kingdom",
+    "ships_to_us": true,
+    "shipping_tier": "green",
+    "supported_proxies": [],
+    "payment_methods": ["credit_card", "paypal", "apple_pay", "klarna"],
+    "description_en": "London-based luxury fashion retailer with a curated selection of Japanese designers. Carries sacai, Toga, Goldwin, and select avant-garde labels. Known for strong editorial curation and personal shopping services."
+  },
+  {
+    "slug": "zozotown",
+    "name": "ZOZOTOWN",
+    "website": "https://zozo.jp",
+    "country": "Japan",
+    "ships_to_us": false,
+    "shipping_tier": "yellow",
+    "supported_proxies": ["buyee", "zenmarket", "fromjapan"],
+    "payment_methods": ["credit_card_jp", "convenience_store", "carrier_billing"],
+    "description_en": "Japan's largest fashion e-commerce platform with over 8,500 brands. Essential for accessing the full range of Japanese select shops (BEAMS, United Arrows, SHIPS), domestic brands, and items not available on international retailers. Requires proxy service for international purchases. ZOZOUSED section offers secondhand items."
+  },
+  {
+    "slug": "rakuten-fashion",
+    "name": "Rakuten Fashion",
+    "website": "https://fashion.rakuten.co.jp",
+    "country": "Japan",
+    "ships_to_us": false,
+    "shipping_tier": "yellow",
+    "supported_proxies": ["buyee", "zenmarket", "fromjapan"],
+    "payment_methods": ["credit_card_jp", "rakuten_pay", "convenience_store"],
+    "description_en": "Rakuten's dedicated fashion vertical featuring official brand stores and authorized retailers. Good for finding Japanese domestic brands at retail prices with frequent point campaigns and sales events. Rakuten Super Points add value for repeat buyers."
+  },
+  {
+    "slug": "yahoo-shopping-japan",
+    "name": "Yahoo Shopping Japan",
+    "website": "https://shopping.yahoo.co.jp",
+    "country": "Japan",
+    "ships_to_us": false,
+    "shipping_tier": "yellow",
+    "supported_proxies": ["buyee", "fromjapan"],
+    "payment_methods": ["credit_card_jp", "paypay", "convenience_store"],
+    "description_en": "Major Japanese e-commerce platform with both new and pre-owned fashion listings. PayPay bonus campaigns offer significant discounts. Wide range of domestic brands and select shops. Yahoo Auctions (integrated) is useful for archive and secondhand pieces."
+  },
+  {
+    "slug": "isetan-mitsukoshi",
+    "name": "Isetan Mitsukoshi Online",
+    "website": "https://www.mistore.jp",
+    "country": "Japan",
+    "ships_to_us": false,
+    "shipping_tier": "yellow",
+    "supported_proxies": ["buyee", "whiterabbit"],
+    "payment_methods": ["credit_card_jp", "mi_card"],
+    "description_en": "Online store of Japan's most prestigious department store group. Carries premium and luxury Japanese designers including Comme des Garcons, Issey Miyake, Yohji Yamamoto, and exclusive collaborations. The Isetan Shinjuku men's building is a pilgrimage site for fashion enthusiasts."
+  },
+  {
+    "slug": "brand-official-jp",
+    "name": "Brand Official Stores (Japan)",
+    "website": "https://various",
+    "country": "Japan",
+    "ships_to_us": false,
+    "shipping_tier": "red",
+    "supported_proxies": ["buyee", "zenmarket", "fromjapan", "tenso", "whiterabbit"],
+    "payment_methods": ["credit_card_jp", "convenience_store"],
+    "description_en": "Many Japanese brands operate their own online stores that ship domestically only and require Japanese payment methods. These offer the complete product range, first access to new releases, and exclusive items. Proxy or forwarding service required, and some stores block non-JP credit cards."
+  },
+  {
+    "slug": "mercari-jp",
+    "name": "Mercari Japan",
+    "website": "https://www.mercari.com/jp/",
+    "country": "Japan",
+    "ships_to_us": false,
+    "shipping_tier": "red",
+    "supported_proxies": ["buyee", "fromjapan", "whiterabbit"],
+    "payment_methods": ["credit_card_jp", "convenience_store", "merpay"],
+    "description_en": "Japan's largest consumer-to-consumer marketplace, similar to a cross between eBay and Depop. Excellent for finding archive pieces, sold-out items, and secondhand Japanese fashion at below-retail prices. Authentication is buyer's responsibility. Buyee integration makes international purchasing straightforward."
+  }
+]

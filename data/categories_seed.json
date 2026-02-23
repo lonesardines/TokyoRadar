@@ -1,0 +1,10 @@
+[
+  {"name": "Streetwear", "slug": "streetwear", "description": "Urban street fashion and casual wear", "sort_order": 1},
+  {"name": "Avant-garde", "slug": "avant-garde", "description": "Experimental and deconstructed fashion", "sort_order": 2},
+  {"name": "Workwear / Americana", "slug": "workwear", "description": "Heritage-inspired work clothing and Americana", "sort_order": 3},
+  {"name": "Outdoor / Techwear", "slug": "outdoor", "description": "Technical outdoor and performance wear", "sort_order": 4},
+  {"name": "Denim", "slug": "denim", "description": "Premium Japanese denim and jeans", "sort_order": 5},
+  {"name": "Luxury", "slug": "luxury", "description": "High-end designer fashion", "sort_order": 6},
+  {"name": "Casual", "slug": "casual", "description": "Everyday casual fashion", "sort_order": 7},
+  {"name": "Select Shop", "slug": "select-shop", "description": "Multi-brand retail curators", "sort_order": 8}
+]

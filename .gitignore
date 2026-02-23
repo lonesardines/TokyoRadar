@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.egg
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+docker-compose.override.yml
+.tilt-compose-override.yml
+
+# Tilt
+.tilt/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+backups/
+
+# Data
+*.db
+*.sqlite3
+
+# Playwright
+test-results/
+playwright-report/

@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "buyee",
+    "name": "Buyee",
+    "website": "https://buyee.jp",
+    "service_type": "both",
+    "description_en": "The largest Japanese proxy and forwarding service, operated by tenso Inc. Buyee integrates directly with ZOZOTOWN, Rakuten, Yahoo Shopping, Yahoo Auctions, and Mercari, allowing one-click purchasing from these platforms. Comprehensive but fees can accumulate with service charges, inspection fees, and optional photo requests.",
+    "supported_sites": ["ZOZOTOWN", "Rakuten", "Yahoo Shopping", "Yahoo Auctions", "Mercari", "Amazon Japan", "Brand official stores"],
+    "shipping_methods": ["EMS", "DHL", "Surface Mail", "SAL", "Airmail"],
+    "estimated_delivery_days": "7-14",
+    "fee_structure": {
+      "service_fee": "300-500 JPY per item",
+      "domestic_shipping": "Varies by seller, often included",
+      "inspection_fee": "Free basic, 200 JPY per photo for detailed inspection",
+      "consolidation": "500 JPY per package consolidated",
+      "international_shipping": "Varies by weight and method, EMS typically 2000-5000 JPY for clothing",
+      "payment_processing": "3.5% for credit card",
+      "storage": "Free for 30 days, 100 JPY/day after"
+    },
+    "pros": ["Largest supported site coverage", "Direct integration with major JP platforms", "Auction bidding support", "Package consolidation", "Multiple shipping options"],
+    "cons": ["Fees accumulate across multiple charges", "Auto-photo inspection costs extra", "Customer service can be slow during peak times", "Interface can be overwhelming for first-time users"]
+  },
+  {
+    "slug": "zenmarket",
+    "name": "ZenMarket",
+    "website": "https://zenmarket.jp",
+    "service_type": "both",
+    "description_en": "A well-regarded proxy service known for its clean, English-friendly interface and responsive customer support. ZenMarket charges a flat per-item fee and supports purchasing from most major Japanese e-commerce platforms. Popular among first-time proxy users for its simplicity.",
+    "supported_sites": ["Rakuten", "Yahoo Shopping", "Yahoo Auctions", "Amazon Japan", "Mercari", "Brand official stores"],
+    "shipping_methods": ["EMS", "DHL", "Surface Mail", "SAL", "Airmail", "FedEx"],
+    "estimated_delivery_days": "7-14",
+    "fee_structure": {
+      "service_fee": "300 JPY per item",
+      "domestic_shipping": "Varies by seller",
+      "inspection_fee": "Free (includes photos)",
+      "consolidation": "Free",
+      "international_shipping": "Varies by weight and method, EMS typically 2000-5000 JPY for clothing",
+      "payment_processing": "3.5% for PayPal, free for credit card",
+      "storage": "Free for 45 days, then 300 JPY/day"
+    },
+    "pros": ["Clean and intuitive interface", "Helpful English-speaking support", "Free consolidation", "Free inspection photos", "Good for beginners"],
+    "cons": ["Fewer directly integrated sites than Buyee", "No direct ZOZOTOWN integration", "Slightly slower processing during sales events"]
+  },
+  {
+    "slug": "fromjapan",
+    "name": "FromJapan",
+    "website": "https://www.fromjapan.co.jp",
+    "service_type": "both",
+    "description_en": "A budget-friendly proxy and forwarding service with wide site coverage and lower per-item fees. FromJapan requires slightly more manual effort in the ordering process but offers savings on service fees. Good option for experienced proxy shoppers comfortable with a less automated workflow.",
+    "supported_sites": ["Rakuten", "Yahoo Shopping", "Yahoo Auctions", "Amazon Japan", "Mercari", "ZOZOTOWN", "Most Japanese online stores"],
+    "shipping_methods": ["EMS", "DHL", "Surface Mail", "SAL", "Airmail"],
+    "estimated_delivery_days": "10-21",
+    "fee_structure": {
+      "service_fee": "200-300 JPY per item (plan dependent)",
+      "domestic_shipping": "Varies by seller",
+      "inspection_fee": "Free basic, 100 JPY for additional photos",
+      "consolidation": "200 JPY per package",
+      "international_shipping": "Varies by weight and method, generally competitive",
+      "payment_processing": "Free for credit card, 3% for PayPal",
+      "storage": "Free for 45 days, 200 JPY/day after"
+    },
+    "pros": ["Lower service fees", "Wide site coverage", "Transparent pricing", "Multiple shipping options"],
+    "cons": ["Slower processing times", "More manual ordering process", "Interface less polished than competitors", "Response times can vary"]
+  },
+  {
+    "slug": "tenso",
+    "name": "Tenso",
+    "website": "https://www.tenso.com",
+    "service_type": "forwarding",
+    "description_en": "A pure forwarding service that provides a Japanese address for receiving packages. You purchase items yourself from Japanese online stores and have them shipped to your Tenso address, which then forwards them internationally. The cheapest option if you can handle the purchasing process and have a way to pay on Japanese sites.",
+    "supported_sites": ["Any Japanese online store that ships domestically"],
+    "shipping_methods": ["EMS", "DHL", "Surface Mail", "SAL", "Airmail"],
+    "estimated_delivery_days": "7-14",
+    "fee_structure": {
+      "service_fee": "No per-item service fee",
+      "domestic_shipping": "Paid directly to store when ordering",
+      "inspection_fee": "Free basic inspection",
+      "consolidation": "500 JPY per consolidation",
+      "international_shipping": "Varies by weight, competitive rates",
+      "payment_processing": "N/A (you pay stores directly)",
+      "storage": "Free for 30 days, 100 JPY/day after"
+    },
+    "pros": ["No service fee markup", "Cheapest overall option", "Works with any Japanese store", "Simple forwarding model"],
+    "cons": ["Must purchase items yourself", "Need Japanese payment method for many stores", "No purchasing assistance", "Cannot use for auction sites or Mercari without buying yourself"]
+  },
+  {
+    "slug": "whiterabbit",
+    "name": "White Rabbit Express",
+    "website": "https://www.whiterabbitexpress.com",
+    "service_type": "proxy",
+    "description_en": "A premium personal shopping service where dedicated staff purchase items on your behalf from any store in Japan, including physical retail locations. The most expensive option but handles complex requests like store exclusives, limited releases, and items from shops without online presence.",
+    "supported_sites": ["Any Japanese store, online or physical"],
+    "shipping_methods": ["EMS", "DHL", "FedEx"],
+    "estimated_delivery_days": "7-14",
+    "fee_structure": {
+      "service_fee": "5-10% of item price (minimum 500 JPY)",
+      "domestic_shipping": "Included in service",
+      "inspection_fee": "Included in service",
+      "consolidation": "Included in service",
+      "international_shipping": "Varies by weight and method",
+      "payment_processing": "Included in percentage fee",
+      "storage": "Free for 30 days"
+    },
+    "pros": ["Handles any purchase request, online or in-store", "Personal shopper service", "Can visit physical stores and boutiques", "Best for complex or hard-to-find items", "Concierge-level support"],
+    "cons": ["Most expensive option (percentage-based fee)", "Slower for standard items", "Minimum fee applies to cheap items", "Limited scalability for bulk orders"]
+  }
+]

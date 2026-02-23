@@ -1,0 +1,1784 @@
+[
+  {
+    "name": "BAPE",
+    "name_ja": "ア・ベイシング・エイプ",
+    "slug": "bape",
+    "description": "Founded by NIGO in the backstreets of Harajuku, A Bathing Ape became the definitive Japanese streetwear brand with its iconic ape head logo and shark hoodies. Now owned by I.T Group, BAPE continues to drive global streetwear culture through bold camo prints and high-profile collaborations.",
+    "founded_year": 1993,
+    "founder": "NIGO",
+    "headquarters": "Harajuku, Tokyo",
+    "website": "https://bape.com",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "BAPE is widely available through resale and select international retailers, but Japan-exclusive items require a proxy. Official online store ships domestically only.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/bape",
+          "tier": "green",
+          "notes": "Curated seasonal selection, ships worldwide"
+        },
+        {
+          "name": "BAPE Official (via Buyee)",
+          "url": "https://bape.com",
+          "tier": "yellow",
+          "notes": "Full catalog including Japan exclusives, use proxy service"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/a-bathing-ape",
+          "tier": "green",
+          "notes": "Regular drops, international shipping"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Wider range of seasonal items at retail"
+        }
+      ]
+    }
+  },
+  {
+    "name": "HUMAN MADE",
+    "name_ja": "ヒューマンメイド",
+    "slug": "human-made",
+    "description": "NIGO's post-BAPE venture blends vintage Americana aesthetics with Japanese streetwear sensibility. Known for its heart logo, varsity jackets, and collaborations with brands like adidas and Girls Don't Cry, HUMAN MADE channels a nostalgic, handcrafted feel.",
+    "founded_year": 2010,
+    "founder": "NIGO",
+    "headquarters": "Tokyo",
+    "website": "https://humanmade.jp",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Limited international availability. Official store ships Japan-only. Select pieces appear on global retailers during drops.",
+      "best_channels": [
+        {
+          "name": "HUMAN MADE Official (via proxy)",
+          "url": "https://humanmade.jp",
+          "tier": "yellow",
+          "notes": "Full range including exclusives, proxy required"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/human-made",
+          "tier": "green",
+          "notes": "Seasonal drops, direct US shipping"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/human-made",
+          "tier": "green",
+          "notes": "Curated selection with international shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "NEIGHBORHOOD",
+    "name_ja": "ネイバーフッド",
+    "slug": "neighborhood",
+    "description": "Shinsuke Takizawa's NEIGHBORHOOD draws from military, motorcycle, and workwear aesthetics to create a dark, rugged vision of Tokyo streetwear. A cornerstone of the Ura-Harajuku movement, the brand is known for its skull motifs, MA-1 jackets, and collaborations with WTAPS and adidas.",
+    "founded_year": 1994,
+    "founder": "Shinsuke Takizawa",
+    "headquarters": "Harajuku, Tokyo",
+    "website": "https://neighborhood.jp",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at select global retailers for mainline pieces. Japan-exclusive collaborations require proxy purchasing. Official store is Japan-only.",
+      "best_channels": [
+        {
+          "name": "Haven",
+          "url": "https://havenshop.com/collections/neighborhood",
+          "tier": "green",
+          "notes": "Authorized stockist, ships to US"
+        },
+        {
+          "name": "NEIGHBORHOOD Official (via proxy)",
+          "url": "https://neighborhood.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic only"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/neighborhood",
+          "tier": "green",
+          "notes": "Solid seasonal selection"
+        }
+      ]
+    }
+  },
+  {
+    "name": "WTAPS",
+    "name_ja": "ダブルタップス",
+    "slug": "wtaps",
+    "description": "Tetsu Nishiyama's WTAPS fuses military precision with streetwear attitude, creating utilitarian garments marked by bold typography and functional details. Alongside NEIGHBORHOOD, WTAPS helped define the militaristic side of Harajuku's streetwear scene.",
+    "founded_year": 1996,
+    "founder": "Tetsu Nishiyama",
+    "headquarters": "Tokyo",
+    "website": "https://wtaps.com",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "International availability is limited to select stockists. Japan releases often sell out quickly. Proxy recommended for full access.",
+      "best_channels": [
+        {
+          "name": "Haven",
+          "url": "https://havenshop.com/collections/wtaps",
+          "tier": "green",
+          "notes": "Key North American stockist"
+        },
+        {
+          "name": "WTAPS Official (via proxy)",
+          "url": "https://wtaps.com",
+          "tier": "yellow",
+          "notes": "Complete catalog, Japan only"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/wtaps",
+          "tier": "green",
+          "notes": "Limited but reliable seasonal stock"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Wacko Maria",
+    "name_ja": "ワコマリア",
+    "slug": "wacko-maria",
+    "description": "Born from the worlds of rockabilly, ska, and classic cinema, Wacko Maria brings a louche, rebellious energy to Japanese streetwear. Co-founded by former J-League footballer Atsuhiko Mori, the brand is celebrated for its Hawaiian shirts, leopard prints, and film-referencing graphics.",
+    "founded_year": 2005,
+    "founder": "Atsuhiko Mori & Keiji Ishizuka",
+    "headquarters": "Tokyo",
+    "website": "https://wackomaria.com",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Growing international presence but Japan-exclusive pieces still require proxy. Hawaiian shirts are the signature entry point.",
+      "best_channels": [
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/wacko-maria",
+          "tier": "green",
+          "notes": "Good seasonal selection, ships internationally"
+        },
+        {
+          "name": "Wacko Maria Official (via proxy)",
+          "url": "https://wackomaria.com",
+          "tier": "yellow",
+          "notes": "Full range including collaborations"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/wacko-maria",
+          "tier": "green",
+          "notes": "Curated drops each season"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Comme des Garçons",
+    "name_ja": "コム・デ・ギャルソン",
+    "slug": "comme-des-garcons",
+    "description": "Rei Kawakubo's Comme des Garçons revolutionized global fashion with its anti-fashion philosophy, deconstructed silhouettes, and conceptual runway shows. The brand's main line remains largely Japan-exclusive, while diffusion lines like CDG Play have achieved worldwide commercial success.",
+    "founded_year": 1969,
+    "founder": "Rei Kawakubo",
+    "headquarters": "Tokyo / Paris",
+    "website": "https://comme-des-garcons.com",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "CDG Play is widely available globally. Main line and Homme Plus are harder to find outside Japan and Dover Street Market. Use proxy for JP-exclusive releases.",
+      "best_channels": [
+        {
+          "name": "Dover Street Market",
+          "url": "https://www.doverstreetmarket.com",
+          "tier": "green",
+          "notes": "Largest CDG stockist outside Japan, US locations"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/comme-des-garcons",
+          "tier": "green",
+          "notes": "Wide range of diffusion lines"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/comme-des-garcons/items.aspx",
+          "tier": "green",
+          "notes": "Multi-boutique sourcing for rare pieces"
+        },
+        {
+          "name": "CDG Official Tokyo (via proxy)",
+          "url": "https://comme-des-garcons.com",
+          "tier": "yellow",
+          "notes": "Japan-only main line pieces"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Undercover",
+    "name_ja": "アンダーカバー",
+    "slug": "undercover",
+    "description": "Jun Takahashi's Undercover merges punk rock ethos with high fashion craftsmanship, producing collections that are narrative-driven and visually arresting. From the early Harajuku days to Paris Fashion Week, Undercover remains one of Japan's most consistently innovative labels.",
+    "founded_year": 1990,
+    "founder": "Jun Takahashi",
+    "headquarters": "Tokyo",
+    "website": "https://undercoverism.com",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at major luxury retailers internationally. Japan store exclusives and collaborations need proxy access.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/undercover",
+          "tier": "green",
+          "notes": "Strong seasonal selection"
+        },
+        {
+          "name": "Dover Street Market",
+          "url": "https://www.doverstreetmarket.com",
+          "tier": "green",
+          "notes": "Special collaborations and exclusives"
+        },
+        {
+          "name": "Undercover Official (via proxy)",
+          "url": "https://undercoverism.com",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic shipping only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "sacai",
+    "name_ja": "サカイ",
+    "slug": "sacai",
+    "description": "Chitose Abe's sacai is built on the concept of hybrid garments, splicing unexpected fabrics and silhouettes into cohesive designs. Known for its Nike collaborations and layered aesthetic, sacai has become one of the most commercially successful Japanese avant-garde brands globally.",
+    "founded_year": 1999,
+    "founder": "Chitose Abe",
+    "headquarters": "Tokyo",
+    "website": "https://sacai.jp",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Strong international retail presence. Nike collaborations sell out instantly. Mainline available at luxury stockists year-round.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/sacai",
+          "tier": "green",
+          "notes": "Reliable seasonal stock"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/sacai",
+          "tier": "green",
+          "notes": "Premium selection with global shipping"
+        },
+        {
+          "name": "sacai Official (via proxy)",
+          "url": "https://sacai.jp",
+          "tier": "yellow",
+          "notes": "Japan exclusives and early drops"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Yohji Yamamoto",
+    "name_ja": "ヨウジヤマモト",
+    "slug": "yohji-yamamoto",
+    "description": "A towering figure in fashion history, Yohji Yamamoto's all-black, oversized silhouettes challenged Western beauty standards when he debuted in Paris in 1981. His work across mainline, Y-3 with adidas, and various sub-labels continues to define dark, poetic fashion.",
+    "founded_year": 1972,
+    "founder": "Yohji Yamamoto",
+    "headquarters": "Tokyo",
+    "website": "https://www.yohjiyamamoto.co.jp",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Y-3 is widely available. Pour Homme and mainline pieces are stocked at luxury retailers. Archive pieces command premium resale prices.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/yohji-yamamoto",
+          "tier": "green",
+          "notes": "Pour Homme and Y-3 lines available"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/yohji-yamamoto/items.aspx",
+          "tier": "green",
+          "notes": "Wide range from global boutiques"
+        },
+        {
+          "name": "Yohji Yamamoto Official (via proxy)",
+          "url": "https://www.yohjiyamamoto.co.jp",
+          "tier": "yellow",
+          "notes": "Full Japanese retail access"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Issey Miyake",
+    "name_ja": "イッセイ ミヤケ",
+    "slug": "issey-miyake",
+    "description": "Issey Miyake pioneered the intersection of technology and fashion, with innovations like Pleats Please and A-POC transforming how garments are conceived and produced. The brand continues to push boundaries in textile engineering and wearable art under creative directors carrying forward the founder's legacy.",
+    "founded_year": 1970,
+    "founder": "Issey Miyake",
+    "headquarters": "Tokyo",
+    "website": "https://www.isseymiyake.com",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "One of the most internationally accessible Japanese designer brands with its own US retail stores. Pleats Please and BAO BAO lines are widely stocked.",
+      "best_channels": [
+        {
+          "name": "Issey Miyake Official",
+          "url": "https://www.isseymiyake.com",
+          "tier": "green",
+          "notes": "US online store available, direct shipping"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/issey-miyake",
+          "tier": "green",
+          "notes": "Homme Plisse and mainline available"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/issey-miyake",
+          "tier": "green",
+          "notes": "Curated menswear selection"
+        }
+      ]
+    }
+  },
+  {
+    "name": "visvim",
+    "name_ja": "ビズビム",
+    "slug": "visvim",
+    "description": "Hiroki Nakamura's visvim obsessively researches heritage craftsmanship from around the world, incorporating natural dyes, hand-stitching, and artisanal techniques into Americana-inspired pieces. The brand's FBT moccasins and Christo sandals are icons, and its commitment to craft places it in a category of its own.",
+    "founded_year": 2001,
+    "founder": "Hiroki Nakamura",
+    "headquarters": "Tokyo",
+    "website": "https://www.visvim.tv",
+    "category_slug": "workwear",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "visvim operates its own WMV e-commerce internationally but stock is limited. F.I.L. flagship stores in Tokyo carry the full range. Resale market is active for sold-out pieces.",
+      "best_channels": [
+        {
+          "name": "visvim WMV Official",
+          "url": "https://www.visvim.tv",
+          "tier": "yellow",
+          "notes": "Official e-commerce, limited international shipping on select items"
+        },
+        {
+          "name": "Dover Street Market",
+          "url": "https://www.doverstreetmarket.com",
+          "tier": "green",
+          "notes": "Carries seasonal visvim selections"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/visvim/items.aspx",
+          "tier": "green",
+          "notes": "Multi-boutique sourcing"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Kapital",
+    "name_ja": "キャピタル",
+    "slug": "kapital",
+    "description": "Based in Okayama's denim country, Kapital transforms American workwear and folk traditions into wildly creative garments featuring patchwork, sashiko stitching, and bold indigo dyeing. The Hirata family's three-generation denim legacy makes Kapital one of the most authentically artisanal Japanese brands.",
+    "founded_year": 1984,
+    "founder": "Toshikiyo Hirata",
+    "headquarters": "Kojima, Okayama",
+    "website": "https://www.kapital.jp",
+    "category_slug": "workwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Kapital has limited US stockists but most of the range requires proxy purchasing from Japan. The brand's own online store is comprehensive but ships domestically only.",
+      "best_channels": [
+        {
+          "name": "Kapital Official (via proxy)",
+          "url": "https://www.kapital.jp",
+          "tier": "yellow",
+          "notes": "Complete catalog, proxy required for international"
+        },
+        {
+          "name": "Canoe Club",
+          "url": "https://canoeclub.com/collections/kapital",
+          "tier": "green",
+          "notes": "US-based authorized stockist"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Good selection at Japanese retail prices"
+        }
+      ]
+    }
+  },
+  {
+    "name": "NEEDLES",
+    "name_ja": "ニードルズ",
+    "slug": "needles",
+    "description": "Keizo Shimizu's NEEDLES, part of the Nepenthes family, is renowned for its track pants with signature butterfly embroidery and its masterful reconstruction of vintage sportswear. The brand's papillon motif has become one of the most recognizable symbols in contemporary fashion.",
+    "founded_year": 1995,
+    "founder": "Keizo Shimizu",
+    "headquarters": "Tokyo",
+    "website": "https://www.needles.jp",
+    "category_slug": "workwear",
+    "price_range": "mid",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Relatively accessible through Nepenthes New York and global stockists. Track pants are the signature entry point. Japan stores carry wider range.",
+      "best_channels": [
+        {
+          "name": "Nepenthes New York",
+          "url": "https://nepenthesny.com",
+          "tier": "green",
+          "notes": "Official US retail, full NEEDLES range"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/needles",
+          "tier": "green",
+          "notes": "Strong seasonal stock"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/needles",
+          "tier": "green",
+          "notes": "Reliable selection with international shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Engineered Garments",
+    "name_ja": "エンジニアードガーメンツ",
+    "slug": "engineered-garments",
+    "description": "Designed by Daiki Suzuki in New York under the Nepenthes umbrella, Engineered Garments applies a Japanese eye for detail to American workwear, military, and Ivy League traditions. The brand is celebrated for its Bedford jacket, Loiter jacket, and meticulous pattern-mixing.",
+    "founded_year": 1999,
+    "founder": "Daiki Suzuki",
+    "headquarters": "New York",
+    "website": "https://www.engineeredgarments.com",
+    "category_slug": "workwear",
+    "price_range": "mid_high",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Highly accessible in the US through Nepenthes NY and many authorized retailers. One of the easiest Japanese-designed brands to buy directly.",
+      "best_channels": [
+        {
+          "name": "Nepenthes New York",
+          "url": "https://nepenthesny.com",
+          "tier": "green",
+          "notes": "Official US flagship retailer"
+        },
+        {
+          "name": "Totem Brand Co.",
+          "url": "https://totembrandco.com/collections/engineered-garments",
+          "tier": "green",
+          "notes": "Authorized US stockist"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/engineered-garments",
+          "tier": "green",
+          "notes": "Premium selection with global shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "orSlow",
+    "name_ja": "オアスロウ",
+    "slug": "orslow",
+    "description": "Ichiro Nakatsu's orSlow produces unhurried, vintage-inspired workwear and denim using carefully sourced fabrics and traditional construction methods. The brand name itself ('or slow') reflects its philosophy of slowing down and appreciating craft over speed.",
+    "founded_year": 2005,
+    "founder": "Ichiro Nakatsu",
+    "headquarters": "Tokyo",
+    "website": "https://www.orslow.jp",
+    "category_slug": "workwear",
+    "price_range": "mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Growing availability through US and European stockists. Japanese retail offers the widest selection and earliest access to new releases.",
+      "best_channels": [
+        {
+          "name": "Canoe Club",
+          "url": "https://canoeclub.com/collections/orslow",
+          "tier": "green",
+          "notes": "US authorized stockist, good selection"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/orslow",
+          "tier": "green",
+          "notes": "International shipping available"
+        },
+        {
+          "name": "orSlow Official (via proxy)",
+          "url": "https://www.orslow.jp",
+          "tier": "yellow",
+          "notes": "Full catalog, Japan domestic only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "nanamica",
+    "name_ja": "ナナミカ",
+    "slug": "nanamica",
+    "description": "Eiichiro Homma's nanamica bridges the gap between urban fashion and outdoor functionality, using GORE-TEX and technical fabrics in clean, city-appropriate silhouettes. As the Japanese licensee for The North Face Purple Label, nanamica also produces one of the most coveted Japan-exclusive collaborations.",
+    "founded_year": 2003,
+    "founder": "Eiichiro Homma",
+    "headquarters": "Tokyo",
+    "website": "https://www.nanamica.com",
+    "category_slug": "outdoor",
+    "price_range": "mid_high",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "nanamica ships internationally from its own online store. The North Face Purple Label remains Japan-exclusive and requires proxy. Mainline is stocked at global retailers.",
+      "best_channels": [
+        {
+          "name": "nanamica Official",
+          "url": "https://www.nanamica.com",
+          "tier": "green",
+          "notes": "International shipping available on mainline"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/nanamica",
+          "tier": "green",
+          "notes": "Solid seasonal selection"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/nanamica",
+          "tier": "green",
+          "notes": "Curated range with global shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Snow Peak",
+    "name_ja": "スノーピーク",
+    "slug": "snow-peak",
+    "description": "Founded in 1958 as a mountaineering equipment maker in Niigata, Snow Peak evolved into a lifestyle brand encompassing premium camping gear and a sophisticated apparel line. Their clothing brings the same obsessive quality and functional design to everyday urban wear.",
+    "founded_year": 1958,
+    "founder": "Yukio Yamai",
+    "headquarters": "Sanjo, Niigata",
+    "website": "https://www.snowpeak.co.jp",
+    "category_slug": "outdoor",
+    "price_range": "mid",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Snow Peak has US retail operations including a Portland headquarters and US online store. Most apparel is accessible directly without proxy.",
+      "best_channels": [
+        {
+          "name": "Snow Peak USA",
+          "url": "https://www.snowpeak.com",
+          "tier": "green",
+          "notes": "US online store with direct shipping"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/snow-peak",
+          "tier": "green",
+          "notes": "Select apparel with global shipping"
+        },
+        {
+          "name": "Snow Peak JP (via proxy)",
+          "url": "https://www.snowpeak.co.jp",
+          "tier": "yellow",
+          "notes": "Japan-exclusive items and colorways"
+        }
+      ]
+    }
+  },
+  {
+    "name": "and wander",
+    "name_ja": "アンドワンダー",
+    "slug": "and-wander",
+    "description": "Founded by former Issey Miyake designers Keita Ikeuchi and Mihoko Mori, and wander brings a fashion-forward sensibility to outdoor clothing. Their pieces balance technical performance with an aesthetic refinement rarely seen in the outdoor category.",
+    "founded_year": 2011,
+    "founder": "Keita Ikeuchi & Mihoko Mori",
+    "headquarters": "Tokyo",
+    "website": "https://www.andwander.com",
+    "category_slug": "outdoor",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Growing global presence through select stockists. Japan store has widest range. Technical outerwear pieces are the standout category.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/and-wander",
+          "tier": "green",
+          "notes": "Seasonal selection with international shipping"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/and-wander",
+          "tier": "green",
+          "notes": "Curated range"
+        },
+        {
+          "name": "and wander Official (via proxy)",
+          "url": "https://www.andwander.com",
+          "tier": "yellow",
+          "notes": "Full collection, Japan shipping only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Goldwin",
+    "name_ja": "ゴールドウイン",
+    "slug": "goldwin",
+    "description": "Goldwin is Japan's foremost technical performance apparel company, holding Japanese licenses for The North Face and Helly Hansen while developing its own premium Goldwin label. Their in-house line showcases cutting-edge Japanese textile technology in minimalist, high-performance designs.",
+    "founded_year": 1950,
+    "founder": "Tosaku Nishida",
+    "headquarters": "Tokyo",
+    "website": "https://www.goldwin.co.jp",
+    "category_slug": "outdoor",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "The Goldwin own-label line is primarily available in Japan. Some pieces appear on international stockists. The North Face Japan exclusives require proxy.",
+      "best_channels": [
+        {
+          "name": "Goldwin Official (via proxy)",
+          "url": "https://www.goldwin.co.jp",
+          "tier": "yellow",
+          "notes": "Full Goldwin label range, Japan only"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/goldwin",
+          "tier": "green",
+          "notes": "Limited but growing selection"
+        },
+        {
+          "name": "Matches Fashion",
+          "url": "https://www.matchesfashion.com/us/mens/designers/goldwin",
+          "tier": "green",
+          "notes": "Select seasonal pieces"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Descente ALLTERRAIN",
+    "name_ja": "デサント オルテライン",
+    "slug": "descente-allterrain",
+    "description": "Descente ALLTERRAIN represents the pinnacle of Japanese technical outerwear, combining Descente's decades of sportswear expertise with futuristic design and premium materials. Their seamless down jackets and Schematech construction exemplify Japan's leadership in functional fashion innovation.",
+    "founded_year": 2012,
+    "founder": "Descente Ltd.",
+    "headquarters": "Osaka",
+    "website": "https://www.descente-allterrain.com",
+    "category_slug": "outdoor",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Limited international distribution. Japan stores and online carry the full range. The Mountaineer and Anchor down jackets are standout pieces.",
+      "best_channels": [
+        {
+          "name": "Descente ALLTERRAIN Official (via proxy)",
+          "url": "https://www.descente-allterrain.com",
+          "tier": "yellow",
+          "notes": "Complete range, Japan domestic only"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/descente-allterrain",
+          "tier": "green",
+          "notes": "Curated outerwear selection"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Wider range at Japan retail prices"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Momotaro Jeans",
+    "name_ja": "桃太郎ジーンズ",
+    "slug": "momotaro-jeans",
+    "description": "Part of the Japan Blue Group, Momotaro Jeans produces premium selvedge denim in Okayama's Kojima district, the birthplace of Japanese jeans. Named after the folk hero Momotaro, the brand is known for its distinctive pink selvedge line, battle stripes, and exceptional fabric development.",
+    "founded_year": 2006,
+    "founder": "Japan Blue Group",
+    "headquarters": "Kojima, Okayama",
+    "website": "https://www.momotarojeans.net",
+    "category_slug": "denim",
+    "price_range": "mid_high",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Well-distributed internationally through denim specialty retailers. US stockists carry a solid range. Okayama factory store has exclusive models.",
+      "best_channels": [
+        {
+          "name": "Okayama Denim",
+          "url": "https://www.okayamadenim.com/collections/momotaro-jeans",
+          "tier": "green",
+          "notes": "Extensive range with international shipping"
+        },
+        {
+          "name": "Denimio",
+          "url": "https://www.denimio.com/momotaro-jeans",
+          "tier": "green",
+          "notes": "Japan-based, ships worldwide tax-free"
+        },
+        {
+          "name": "Blue Owl Workshop",
+          "url": "https://www.blueowl.us/collections/momotaro",
+          "tier": "green",
+          "notes": "US stockist with exclusive collaborations"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Pure Blue Japan",
+    "name_ja": "ピュアブルージャパン",
+    "slug": "pure-blue-japan",
+    "description": "Pure Blue Japan is revered among denim enthusiasts for its use of natural indigo dyeing, slubby textures, and hand-woven selvedge fabrics. Based in Okayama, the brand produces some of the most characterful raw denim in the world, with each pair developing unique fade patterns.",
+    "founded_year": 2001,
+    "founder": "Kenichi Iwaya",
+    "headquarters": "Okayama",
+    "website": "https://www.purebluejapan.jp",
+    "category_slug": "denim",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available through dedicated denim retailers internationally. Natural indigo pieces command premium prices. Japan retail offers earliest access and exclusive fabrics.",
+      "best_channels": [
+        {
+          "name": "Okayama Denim",
+          "url": "https://www.okayamadenim.com/collections/pure-blue-japan",
+          "tier": "green",
+          "notes": "Largest international selection"
+        },
+        {
+          "name": "Denimio",
+          "url": "https://www.denimio.com/pure-blue-japan",
+          "tier": "green",
+          "notes": "Tax-free from Japan, wide range"
+        },
+        {
+          "name": "Blue Owl Workshop",
+          "url": "https://www.blueowl.us/collections/pure-blue-japan",
+          "tier": "green",
+          "notes": "US stockist with exclusive cuts"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Iron Heart",
+    "name_ja": "アイアンハート",
+    "slug": "iron-heart",
+    "description": "Iron Heart is synonymous with heavyweight denim, producing jeans in fabrics up to 25oz that are engineered for motorcyclists and anyone who demands extreme durability. Founded by Shinichi Haraki, the brand has cultivated a devoted global following through its uncompromising approach to construction.",
+    "founded_year": 2003,
+    "founder": "Shinichi Haraki",
+    "headquarters": "Kanagawa",
+    "website": "https://www.ironheart.co.jp",
+    "category_slug": "denim",
+    "price_range": "mid_high",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Iron Heart has established international distribution through its own overseas web stores. Self-Edge is the key US partner. Community-driven brand with active forums.",
+      "best_channels": [
+        {
+          "name": "Iron Heart International",
+          "url": "https://www.ironheartdenim.com",
+          "tier": "green",
+          "notes": "Official international store, ships worldwide"
+        },
+        {
+          "name": "Self Edge",
+          "url": "https://www.selfedge.com/iron-heart",
+          "tier": "green",
+          "notes": "Key US stockist with exclusive models"
+        },
+        {
+          "name": "Iron Heart Japan (via proxy)",
+          "url": "https://www.ironheart.co.jp",
+          "tier": "yellow",
+          "notes": "Japan-exclusive models and first access"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Samurai Jeans",
+    "name_ja": "侍ジーンズ",
+    "slug": "samurai-jeans",
+    "description": "Samurai Jeans is a purist's denim brand, creating faithful reproductions of vintage American jeans using proprietary looms and fabrics. Based in Osaka, founder Yoshiyuki Nogami's dedication to historical accuracy and heavy-duty construction has earned Samurai a cult status among denim collectors.",
+    "founded_year": 1997,
+    "founder": "Yoshiyuki Nogami",
+    "headquarters": "Osaka",
+    "website": "https://www.samurai-j.com",
+    "category_slug": "denim",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Limited international distribution. Best purchased through Japan-based denim retailers that ship internationally. Zero series and S710 are iconic models.",
+      "best_channels": [
+        {
+          "name": "Denimio",
+          "url": "https://www.denimio.com/samurai-jeans",
+          "tier": "green",
+          "notes": "Best international source, tax-free from Japan"
+        },
+        {
+          "name": "Okayama Denim",
+          "url": "https://www.okayamadenim.com/collections/samurai-jeans",
+          "tier": "green",
+          "notes": "Good selection with international shipping"
+        },
+        {
+          "name": "Samurai Jeans Official (via proxy)",
+          "url": "https://www.samurai-j.com",
+          "tier": "yellow",
+          "notes": "Full catalog including limited editions"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Studio D'Artisan",
+    "name_ja": "ステュディオ・ダ・ルチザン",
+    "slug": "studio-dartisan",
+    "description": "As one of the original five Osaka denim brands (alongside Evisu, Denime, Full Count, and Warehouse), Studio D'Artisan has been producing premium Japanese denim since 1979. Their pig mascot logo and commitment to vintage reproduction techniques make them a cornerstone of the Japanese denim movement.",
+    "founded_year": 1979,
+    "founder": "Shigeharu Tagaki",
+    "headquarters": "Osaka",
+    "website": "https://www.dartisan.co.jp",
+    "category_slug": "denim",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available through denim specialty retailers internationally. One of the most historically important Japanese denim brands. The D1 and SD-108 are classic models.",
+      "best_channels": [
+        {
+          "name": "Denimio",
+          "url": "https://www.denimio.com/studio-d-artisan",
+          "tier": "green",
+          "notes": "Wide range, ships from Japan tax-free"
+        },
+        {
+          "name": "Okayama Denim",
+          "url": "https://www.okayamadenim.com/collections/studio-dartisan",
+          "tier": "green",
+          "notes": "International shipping available"
+        },
+        {
+          "name": "Studio D'Artisan Official (via proxy)",
+          "url": "https://www.dartisan.co.jp",
+          "tier": "yellow",
+          "notes": "Complete range including limited editions"
+        }
+      ]
+    }
+  },
+  {
+    "name": "BEAMS",
+    "name_ja": "ビームス",
+    "slug": "beams",
+    "description": "Japan's premier select shop, BEAMS has shaped Japanese fashion culture since 1976 through its expertly curated mix of international and domestic brands alongside strong in-house labels. With sub-labels like BEAMS Plus (Americana), BEAMS T, and International Gallery BEAMS, it functions as both retailer and tastemaker.",
+    "founded_year": 1976,
+    "founder": "Yo Shitara",
+    "headquarters": "Shinjuku, Tokyo",
+    "website": "https://www.beams.co.jp",
+    "category_slug": "select-shop",
+    "price_range": "mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "BEAMS Plus has US retail presence. Main BEAMS stores are Japan-only. ZOZOTOWN carries extensive BEAMS inventory accessible via proxy.",
+      "best_channels": [
+        {
+          "name": "BEAMS Official (via proxy)",
+          "url": "https://www.beams.co.jp",
+          "tier": "yellow",
+          "notes": "Full range of all sub-labels, Japan only"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Extensive BEAMS inventory at retail prices"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/beams-plus",
+          "tier": "green",
+          "notes": "BEAMS Plus Americana line"
+        }
+      ]
+    }
+  },
+  {
+    "name": "United Arrows",
+    "name_ja": "ユナイテッドアローズ",
+    "slug": "united-arrows",
+    "description": "United Arrows occupies the upscale tier of Japan's select shop ecosystem, curating sophisticated international brands alongside refined in-house labels. Sub-labels like Beauty & Youth and Monkey Time cater to different demographics, while the mainline maintains an elevated, business-casual aesthetic.",
+    "founded_year": 1989,
+    "founder": "Osamu Shigematsu",
+    "headquarters": "Tokyo",
+    "website": "https://www.united-arrows.co.jp",
+    "category_slug": "select-shop",
+    "price_range": "mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Primarily a Japan domestic retailer. Online store and physical shops carry a massive range. Best accessed through proxy or ZOZOTOWN via Buyee.",
+      "best_channels": [
+        {
+          "name": "United Arrows Official (via proxy)",
+          "url": "https://www.united-arrows.co.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic only"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "All UA sub-labels available"
+        },
+        {
+          "name": "Rakuten Fashion (via proxy)",
+          "url": "https://fashion.rakuten.co.jp",
+          "tier": "yellow",
+          "notes": "UA official store on Rakuten"
+        }
+      ]
+    }
+  },
+  {
+    "name": "SHIPS",
+    "name_ja": "シップス",
+    "slug": "ships",
+    "description": "One of Japan's original select shops alongside BEAMS and United Arrows, SHIPS has maintained a classic, preppy-leaning identity since 1977. The brand curates a mix of traditional and contemporary styles with an emphasis on quality basics and timeless American and European influences.",
+    "founded_year": 1977,
+    "founder": "Miura Yoshio",
+    "headquarters": "Tokyo",
+    "website": "https://www.shipsltd.co.jp",
+    "category_slug": "select-shop",
+    "price_range": "mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Japan-only retail with no direct international shipping. ZOZOTOWN is the best proxy-accessible source for SHIPS items.",
+      "best_channels": [
+        {
+          "name": "SHIPS Official (via proxy)",
+          "url": "https://www.shipsltd.co.jp",
+          "tier": "yellow",
+          "notes": "Full catalog, Japan only"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Large SHIPS inventory"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Journal Standard",
+    "name_ja": "ジャーナルスタンダード",
+    "slug": "journal-standard",
+    "description": "Part of the BAYCREWS retail group, Journal Standard offers a casual, approachable take on French and American-influenced fashion. The brand serves as an accessible entry point into Japan's select shop culture with reasonable pricing and trend-aware curation.",
+    "founded_year": 1997,
+    "founder": "BAYCREWS Group",
+    "headquarters": "Tokyo",
+    "website": "https://journal-standard.jp",
+    "category_slug": "select-shop",
+    "price_range": "low_mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Japan-only retail brand. Accessible via ZOZOTOWN proxy. In-house items offer great value for the quality.",
+      "best_channels": [
+        {
+          "name": "BAYCREWS Official (via proxy)",
+          "url": "https://baycrews.jp",
+          "tier": "yellow",
+          "notes": "Parent company store, full range"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Wide selection at retail prices"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Nano Universe",
+    "name_ja": "ナノ・ユニバース",
+    "slug": "nano-universe",
+    "description": "Part of TSI Holdings, Nano Universe provides fashionable, affordable clothing with a European-influenced aesthetic. It occupies a similar space to UNIQLO but with more trend-forward designs, making it popular among young professionals in Japan.",
+    "founded_year": 1999,
+    "founder": "TSI Holdings",
+    "headquarters": "Tokyo",
+    "website": "https://www.nanouniverse.jp",
+    "category_slug": "select-shop",
+    "price_range": "low_mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Japan domestic only. Low-cost entry point for Japanese fashion via proxy services. Great for basics and affordable trend pieces.",
+      "best_channels": [
+        {
+          "name": "Nano Universe Official (via proxy)",
+          "url": "https://www.nanouniverse.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan only"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Large inventory with frequent sales"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Junya Watanabe",
+    "name_ja": "ジュンヤ ワタナベ",
+    "slug": "junya-watanabe",
+    "description": "Operating under the Comme des Garcons umbrella, Junya Watanabe is celebrated for his technical mastery of patchwork, fabric reconstruction, and collaborations with heritage brands like Levi's, Carhartt, and The North Face. His menswear line (Junya Watanabe MAN) has become a pillar of wearable avant-garde fashion.",
+    "founded_year": 1992,
+    "founder": "Junya Watanabe",
+    "headquarters": "Tokyo",
+    "website": "https://comme-des-garcons.com",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at major luxury retailers globally. MAN line is more accessible than womenswear. Heritage brand collaborations are highly sought after.",
+      "best_channels": [
+        {
+          "name": "Dover Street Market",
+          "url": "https://www.doverstreetmarket.com",
+          "tier": "green",
+          "notes": "Primary stockist for CDG family"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/junya-watanabe",
+          "tier": "green",
+          "notes": "Strong MAN line selection"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/junya-watanabe/items.aspx",
+          "tier": "green",
+          "notes": "Multi-boutique global sourcing"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Comme des Garçons Homme Plus",
+    "name_ja": "コム・デ・ギャルソン・オム・プリュス",
+    "slug": "cdg-homme-plus",
+    "description": "Comme des Garcons Homme Plus is Rei Kawakubo's primary menswear runway line, showcasing the most conceptual and avant-garde expressions of her vision. Each season presents a new thematic world, from punk to baroque, making it one of fashion's most anticipated presentations.",
+    "founded_year": 1984,
+    "founder": "Rei Kawakubo",
+    "headquarters": "Tokyo",
+    "website": "https://comme-des-garcons.com",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Stocked at Dover Street Market and high-end boutiques globally. Japan retail has the widest selection. Archive pieces are highly collectible.",
+      "best_channels": [
+        {
+          "name": "Dover Street Market",
+          "url": "https://www.doverstreetmarket.com",
+          "tier": "green",
+          "notes": "Largest CDG stockist globally"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/comme-des-garcons-homme-plus",
+          "tier": "green",
+          "notes": "Seasonal selection available"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/comme-des-garcons-homme-plus/items.aspx",
+          "tier": "green",
+          "notes": "Wide range from global boutiques"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Maison Mihara Yasuhiro",
+    "name_ja": "メゾン ミハラヤスヒロ",
+    "slug": "mihara-yasuhiro",
+    "description": "Mihara Yasuhiro made his name with conceptual footwear that deconstructs and reimagines classic shoe silhouettes, particularly his signature dissolved sneakers. His full ready-to-wear line carries the same playful, subversive approach to fashion conventions.",
+    "founded_year": 1997,
+    "founder": "Mihara Yasuhiro",
+    "headquarters": "Tokyo",
+    "website": "https://www.miharayasuhiro.jp",
+    "category_slug": "avant-garde",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Growing international availability, especially for footwear. The Peterson sneakers have driven global recognition. Full clothing range mainly in Japan.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/maison-mihara-yasuhiro",
+          "tier": "green",
+          "notes": "Strong footwear and apparel selection"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/maison-mihara-yasuhiro/items.aspx",
+          "tier": "green",
+          "notes": "Global boutique sourcing"
+        },
+        {
+          "name": "Mihara Yasuhiro Official (via proxy)",
+          "url": "https://www.miharayasuhiro.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        }
+      ]
+    }
+  },
+  {
+    "name": "AMBUSH",
+    "name_ja": "アンブッシュ",
+    "slug": "ambush",
+    "description": "Co-founded by designer YOON and musician VERBAL, AMBUSH began as a jewelry label before expanding into bold, statement-making ready-to-wear. YOON's appointment as Dior Men's jewelry designer cemented the brand's position at the intersection of street culture and high fashion.",
+    "founded_year": 2008,
+    "founder": "YOON & VERBAL",
+    "headquarters": "Tokyo",
+    "website": "https://www.ambushdesign.com",
+    "category_slug": "avant-garde",
+    "price_range": "mid_high",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Good international availability through the brand's own e-commerce and luxury retailers. Jewelry and accessories are the entry point.",
+      "best_channels": [
+        {
+          "name": "AMBUSH Official",
+          "url": "https://www.ambushdesign.com",
+          "tier": "green",
+          "notes": "International shipping available"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/ambush",
+          "tier": "green",
+          "notes": "Jewelry and apparel selection"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/ambush/items.aspx",
+          "tier": "green",
+          "notes": "Wide range with global shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "FACETASM",
+    "name_ja": "ファセッタズム",
+    "slug": "facetasm",
+    "description": "Hiromichi Ochiai's FACETASM is a collision of streetwear energy and avant-garde construction, known for bold color blocking, oversized silhouettes, and unexpected fabric combinations. Ochiai's background in both Comme des Garcons and streetwear culture creates a uniquely hybridized aesthetic.",
+    "founded_year": 2007,
+    "founder": "Hiromichi Ochiai",
+    "headquarters": "Tokyo",
+    "website": "https://www.facetasm.com",
+    "category_slug": "avant-garde",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Limited international retail presence. Japan stores and select global stockists carry seasonal pieces. Growing recognition after LVMH Prize nomination.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/facetasm",
+          "tier": "green",
+          "notes": "Seasonal selection"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/facetasm/items.aspx",
+          "tier": "green",
+          "notes": "Multi-boutique sourcing"
+        },
+        {
+          "name": "FACETASM Official (via proxy)",
+          "url": "https://www.facetasm.com",
+          "tier": "yellow",
+          "notes": "Full collection, Japan only"
+        }
+      ]
+    }
+  },
+  {
+    "name": "White Mountaineering",
+    "name_ja": "ホワイトマウンテニアリング",
+    "slug": "white-mountaineering",
+    "description": "Yosuke Aizawa's White Mountaineering applies a fashion lens to outdoor clothing, creating technically proficient garments that work equally well on city streets and mountain trails. The brand's collaborations with adidas and Moncler have expanded its reach significantly.",
+    "founded_year": 2006,
+    "founder": "Yosuke Aizawa",
+    "headquarters": "Tokyo",
+    "website": "https://www.whitemountaineering.com",
+    "category_slug": "outdoor",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at select international retailers. Japan retail carries the widest range. adidas collaborations are the most accessible entry point.",
+      "best_channels": [
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/white-mountaineering",
+          "tier": "green",
+          "notes": "Seasonal selection with international shipping"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/white-mountaineering",
+          "tier": "green",
+          "notes": "Curated selection"
+        },
+        {
+          "name": "White Mountaineering Official (via proxy)",
+          "url": "https://www.whitemountaineering.com",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Cav Empt",
+    "name_ja": "シーイー",
+    "slug": "cav-empt",
+    "description": "Created by Sk8thing (graphic designer for BAPE and Billionaire Boys Club) and Toby Feltwell, Cav Empt produces graphic-heavy, dystopian streetwear with a tech-futurist edge. The brand's cryptic graphics, digital prints, and oversized shapes have made it a favorite of the post-streetwear generation.",
+    "founded_year": 2011,
+    "founder": "Sk8thing & Toby Feltwell",
+    "headquarters": "Tokyo",
+    "website": "https://www.cavempt.com",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Drops sell out quickly on the official store. International stockists carry limited selections. The graphic pieces are the brand's signature.",
+      "best_channels": [
+        {
+          "name": "Cav Empt Official",
+          "url": "https://www.cavempt.com",
+          "tier": "yellow",
+          "notes": "Direct drops, limited international shipping"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/cav-empt",
+          "tier": "green",
+          "notes": "Seasonal drops with international shipping"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/cav-empt",
+          "tier": "green",
+          "notes": "Select seasonal pieces"
+        }
+      ]
+    }
+  },
+  {
+    "name": "N.HOOLYWOOD",
+    "name_ja": "エヌ・ハリウッド",
+    "slug": "n-hoolywood",
+    "description": "Daisuke Obana's N.HOOLYWOOD draws deeply from vintage military and Americana archives, reinterpreting historical garments with a Japanese precision and contemporary edge. Named after North Hollywood, the brand has shown at New York Fashion Week and maintains a loyal following among vintage enthusiasts.",
+    "founded_year": 2001,
+    "founder": "Daisuke Obana",
+    "headquarters": "Tokyo",
+    "website": "https://www.n-hoolywood.com",
+    "category_slug": "workwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Limited international distribution. Japan retail carries the full range. The COMPILE and TEST PRODUCT lines offer different price points.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/n-hoolywood",
+          "tier": "green",
+          "notes": "Seasonal selection"
+        },
+        {
+          "name": "N.HOOLYWOOD Official (via proxy)",
+          "url": "https://www.n-hoolywood.com",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Good selection at retail prices"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Porter / Yoshida & Co.",
+    "name_ja": "ポーター / 吉田カバン",
+    "slug": "porter-yoshida",
+    "description": "Founded in 1962 by Kichizo Yoshida, Porter (by Yoshida & Co.) is Japan's most revered bag maker, producing meticulously crafted bags and accessories in their Tokyo workshops. The Tanker series, inspired by military flight jackets, is one of the most iconic bag designs ever created.",
+    "founded_year": 1962,
+    "founder": "Kichizo Yoshida",
+    "headquarters": "Tokyo",
+    "website": "https://www.yoshidakaban.com",
+    "category_slug": "luxury",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Porter International handles some overseas distribution, but Japan carries the full range including collaboration pieces. The Tanker and Heat lines are the most popular.",
+      "best_channels": [
+        {
+          "name": "Yoshida & Co. Official (via proxy)",
+          "url": "https://www.yoshidakaban.com",
+          "tier": "yellow",
+          "notes": "Complete range, Japan domestic"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/porter-yoshida-and-co",
+          "tier": "green",
+          "notes": "Select bags and accessories"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/porter-yoshida-and-co",
+          "tier": "green",
+          "notes": "Curated selection with global shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "SOPHNET. / SOPH.",
+    "name_ja": "ソフネット",
+    "slug": "sophnet",
+    "description": "Hirofumi Kiyonaga's SOPHNET. represents the clean, refined end of Japanese streetwear, producing well-made basics and wardrobe staples with subtle design flourishes. The brand's understated approach and consistent quality have made it a quiet staple of Tokyo's fashion-conscious dressers.",
+    "founded_year": 1998,
+    "founder": "Hirofumi Kiyonaga",
+    "headquarters": "Tokyo",
+    "website": "https://www.soph.net",
+    "category_slug": "streetwear",
+    "price_range": "mid",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Primarily Japan-only distribution. ZOZOTOWN is the best proxy-accessible source. Collaborations with Nike and uniform experiment are the most sought-after pieces.",
+      "best_channels": [
+        {
+          "name": "SOPH. Official (via proxy)",
+          "url": "https://www.soph.net",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Good selection at retail"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/sophnet",
+          "tier": "green",
+          "notes": "Very limited seasonal selection"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Uniform Experiment",
+    "name_ja": "ユニフォーム エクスペリメント",
+    "slug": "uniform-experiment",
+    "description": "A collaborative label between Hirofumi Kiyonaga's SOPH. and Hiroshi Fujiwara's Fragment Design, Uniform Experiment merges minimalist streetwear with Fujiwara's legendary tastemaking. The brand produces refined, wearable pieces that embody Tokyo's understated cool.",
+    "founded_year": 2009,
+    "founder": "Hirofumi Kiyonaga & Hiroshi Fujiwara",
+    "headquarters": "Tokyo",
+    "website": "https://www.uniform-experiment.jp",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Japan-only distribution. Highly sought after due to Hiroshi Fujiwara connection. Proxy services required for international purchase.",
+      "best_channels": [
+        {
+          "name": "SOPH. Official (via proxy)",
+          "url": "https://www.soph.net",
+          "tier": "yellow",
+          "notes": "Carried alongside SOPHNET."
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Regular stock at retail prices"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Toga",
+    "name_ja": "トーガ",
+    "slug": "toga",
+    "description": "Yasuko Furuta's Toga explores themes of femininity and deconstruction through unexpected material combinations, metal hardware, and Western-meets-punk aesthetics. The Toga Virilis menswear line extends her distinctive design language into bold, gender-fluid territory.",
+    "founded_year": 1997,
+    "founder": "Yasuko Furuta",
+    "headquarters": "Tokyo",
+    "website": "https://www.toga.jp",
+    "category_slug": "avant-garde",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at select global retailers. Toga Archives line is the most widely stocked. Japan retail carries the complete range.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/women/designers/toga",
+          "tier": "green",
+          "notes": "Toga Archives and Virilis lines"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/women/toga/items.aspx",
+          "tier": "green",
+          "notes": "Multi-boutique sourcing"
+        },
+        {
+          "name": "Toga Official (via proxy)",
+          "url": "https://www.toga.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Fumito Ganryu",
+    "name_ja": "フミト ガンリュウ",
+    "slug": "fumito-ganryu",
+    "description": "After departing Comme des Garcons where he led the Ganryu line, Fumito Ganryu launched his own label focused on technical daily wear that bridges functionality and design. His collections emphasize innovative fabrics and practical silhouettes for urban living.",
+    "founded_year": 2018,
+    "founder": "Fumito Ganryu",
+    "headquarters": "Tokyo",
+    "website": "https://www.fumitoganryu.com",
+    "category_slug": "avant-garde",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Emerging brand with growing stockist network. Available at forward-thinking boutiques globally. The CDG pedigree brings instant credibility.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/fumito-ganryu",
+          "tier": "green",
+          "notes": "Seasonal selection"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/men/fumito-ganryu/items.aspx",
+          "tier": "green",
+          "notes": "Global boutique sourcing"
+        },
+        {
+          "name": "Fumito Ganryu Official (via proxy)",
+          "url": "https://www.fumitoganryu.com",
+          "tier": "yellow",
+          "notes": "Japan domestic distribution"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Auralee",
+    "name_ja": "オーラリー",
+    "slug": "auralee",
+    "description": "Ryota Iwai's Auralee has quickly become a favorite among minimalist fashion enthusiasts for its obsessive focus on fabric quality. Each piece begins with custom-developed textiles, resulting in elevated basics that feel extraordinary through material innovation rather than design complexity.",
+    "founded_year": 2015,
+    "founder": "Ryota Iwai",
+    "headquarters": "Tokyo",
+    "website": "https://www.auralee.jp",
+    "category_slug": "luxury",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Growing international presence but still primarily Japan-focused. The brand's premium basics command a dedicated following. Fabrics are the primary selling point.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/auralee",
+          "tier": "green",
+          "notes": "Growing seasonal selection"
+        },
+        {
+          "name": "Auralee Official (via proxy)",
+          "url": "https://www.auralee.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Good selection at retail"
+        }
+      ]
+    }
+  },
+  {
+    "name": "COMOLI",
+    "name_ja": "コモリ",
+    "slug": "comoli",
+    "description": "Nobuaki Komori's COMOLI produces understated, impeccably crafted menswear with a focus on natural fabrics and relaxed silhouettes. The brand's extremely limited distribution and word-of-mouth following have created a near-mythical status among Japanese fashion insiders.",
+    "founded_year": 2011,
+    "founder": "Nobuaki Komori",
+    "headquarters": "Tokyo",
+    "website": "https://www.comoli.jp",
+    "category_slug": "luxury",
+    "price_range": "mid_high",
+    "shipping_tier": "red",
+    "buy_guide": {
+      "summary": "Extremely limited distribution even within Japan. No international stockists. Items sell out rapidly from the few authorized retailers. Patience and proxy services are essential.",
+      "best_channels": [
+        {
+          "name": "COMOLI Official (via proxy)",
+          "url": "https://www.comoli.jp",
+          "tier": "red",
+          "notes": "Very limited stock, sells out quickly"
+        },
+        {
+          "name": "Mercari (via Buyee)",
+          "url": "https://www.mercari.com/jp/",
+          "tier": "yellow",
+          "notes": "Secondhand market, verify authenticity"
+        }
+      ]
+    }
+  },
+  {
+    "name": "kolor",
+    "name_ja": "カラー",
+    "slug": "kolor",
+    "description": "Junichi Abe's kolor is built on the interplay of unexpected colors, textures, and materials, creating intellectually stimulating garments that reward close examination. Part of the Comme des Garcons retail family, kolor occupies a unique space between commercial wearability and design experimentation.",
+    "founded_year": 2004,
+    "founder": "Junichi Abe",
+    "headquarters": "Tokyo",
+    "website": "https://www.kolor.jp",
+    "category_slug": "avant-garde",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at select high-end retailers globally. Dover Street Market is the key international stockist. Japan retail carries the full range.",
+      "best_channels": [
+        {
+          "name": "Dover Street Market",
+          "url": "https://www.doverstreetmarket.com",
+          "tier": "green",
+          "notes": "Key international stockist"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/kolor",
+          "tier": "green",
+          "notes": "Seasonal selection"
+        },
+        {
+          "name": "kolor Official (via proxy)",
+          "url": "https://www.kolor.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Suicoke",
+    "name_ja": "スイコック",
+    "slug": "suicoke",
+    "description": "Suicoke transformed the technical sandal from outdoor utility into a fashion statement, with their Vibram-soled MOTO and DEPA models becoming ubiquitous in streetwear and high fashion circles. Collaborations with Mastermind, BAPE, and Needles have cemented their crossover appeal.",
+    "founded_year": 2006,
+    "founder": "Suicoke",
+    "headquarters": "Tokyo",
+    "website": "https://www.suicoke.com",
+    "category_slug": "outdoor",
+    "price_range": "mid",
+    "shipping_tier": "green",
+    "buy_guide": {
+      "summary": "Widely available internationally through the brand's own e-commerce and numerous stockists. One of the most accessible Japanese fashion brands globally.",
+      "best_channels": [
+        {
+          "name": "Suicoke Official",
+          "url": "https://www.suicoke.com",
+          "tier": "green",
+          "notes": "International shipping available"
+        },
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/suicoke",
+          "tier": "green",
+          "notes": "Wide selection including collaborations"
+        },
+        {
+          "name": "END.",
+          "url": "https://www.endclothing.com/us/brands/suicoke",
+          "tier": "green",
+          "notes": "Good range with international shipping"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Hender Scheme",
+    "name_ja": "エンダースキーマ",
+    "slug": "hender-scheme",
+    "description": "Ryo Kashiwazaki's Hender Scheme produces handcrafted leather goods in Tokyo, most famously their 'Hommage' series which recreates iconic sneaker silhouettes in natural vegetable-tanned leather. Every piece is designed to age beautifully, developing a unique patina with wear.",
+    "founded_year": 2010,
+    "founder": "Ryo Kashiwazaki",
+    "headquarters": "Tokyo",
+    "website": "https://www.henderscheme.com",
+    "category_slug": "luxury",
+    "price_range": "high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Available at select high-end retailers globally. The MIP (Manual Industrial Products) sneaker line is the signature entry point. Japan retail carries the widest range.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/hender-scheme",
+          "tier": "green",
+          "notes": "Footwear and accessories selection"
+        },
+        {
+          "name": "Mr Porter",
+          "url": "https://www.mrporter.com/en-us/mens/designer/hender-scheme",
+          "tier": "green",
+          "notes": "Curated leather goods"
+        },
+        {
+          "name": "Hender Scheme Official (via proxy)",
+          "url": "https://www.henderscheme.com",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Sasquatchfabrix.",
+    "name_ja": "サスクワァッチファブリックス",
+    "slug": "sasquatchfabrix",
+    "description": "Daisuke Yokoyama's Sasquatchfabrix. reinterprets traditional Japanese motifs and garment construction through a contemporary streetwear lens. Featuring elements like noragis, happi coats, and ukiyo-e prints alongside Western silhouettes, the brand creates a distinct East-meets-West fusion.",
+    "founded_year": 2003,
+    "founder": "Daisuke Yokoyama",
+    "headquarters": "Tokyo",
+    "website": "https://www.sasquatchfabrix.com",
+    "category_slug": "streetwear",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Limited international distribution. Japan stores carry the full range. The Japanese-motif pieces are the brand's most distinctive offering.",
+      "best_channels": [
+        {
+          "name": "SSENSE",
+          "url": "https://www.ssense.com/en-us/men/designers/sasquatchfabrix",
+          "tier": "green",
+          "notes": "Seasonal selection"
+        },
+        {
+          "name": "Sasquatchfabrix. Official (via proxy)",
+          "url": "https://www.sasquatchfabrix.com",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Good selection at retail prices"
+        }
+      ]
+    }
+  },
+  {
+    "name": "HYKE",
+    "name_ja": "ハイク",
+    "slug": "hyke",
+    "description": "Founded by Hideaki Yoshihara and Yukiko Ode, HYKE produces refined, minimalist womenswear that emphasizes clean lines, quality fabrics, and understated elegance. Their collaborations with The North Face and adidas have introduced a performance edge to their traditionally restrained aesthetic.",
+    "founded_year": 2013,
+    "founder": "Hideaki Yoshihara & Yukiko Ode",
+    "headquarters": "Tokyo",
+    "website": "https://www.hyke.jp",
+    "category_slug": "luxury",
+    "price_range": "mid_high",
+    "shipping_tier": "yellow",
+    "buy_guide": {
+      "summary": "Primarily Japan-only distribution. The North Face collaborations generate the most international demand. Proxy required for most purchases.",
+      "best_channels": [
+        {
+          "name": "HYKE Official (via proxy)",
+          "url": "https://www.hyke.jp",
+          "tier": "yellow",
+          "notes": "Full range, Japan domestic"
+        },
+        {
+          "name": "ZOZOTOWN (via Buyee)",
+          "url": "https://zozo.jp",
+          "tier": "yellow",
+          "notes": "Good selection at retail prices"
+        },
+        {
+          "name": "Farfetch",
+          "url": "https://www.farfetch.com/shopping/women/hyke/items.aspx",
+          "tier": "green",
+          "notes": "Limited seasonal pieces"
+        }
+      ]
+    }
+  }
+]
