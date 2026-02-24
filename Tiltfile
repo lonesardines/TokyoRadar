@@ -21,10 +21,11 @@ docker_build(
     'tokyoradar-backend',
     context='.',
     dockerfile='./backend/Dockerfile',
-    only=['./backend/', './shared/'],
+    only=['./backend/', './shared/', './scraper/'],
     live_update=[
         sync('./backend/', '/app/'),
         sync('./shared/', '/shared/'),
+        sync('./scraper/', '/app/scraper/'),
         run(
             'pip install /shared && pip install -r requirements.txt',
             trigger=['./backend/requirements.txt', './shared/pyproject.toml'],
@@ -40,6 +41,29 @@ dc_resource('backend',
         link('http://localhost:8000/redoc', 'ReDoc'),
         link('http://localhost:8000/health', 'Health'),
     ],
+)
+
+# ----------------------------------------------------------
+# Scraper Worker: Celery
+# ----------------------------------------------------------
+docker_build(
+    'tokyoradar-scraper',
+    context='.',
+    dockerfile='./scraper/Dockerfile',
+    only=['./scraper/', './shared/'],
+    live_update=[
+        sync('./scraper/', '/app/scraper/'),
+        sync('./shared/', '/shared/'),
+        run(
+            'pip install /shared && pip install -r /app/scraper/requirements.txt',
+            trigger=['./scraper/requirements.txt', './shared/pyproject.toml'],
+        ),
+    ],
+)
+
+dc_resource('scraper-worker',
+    labels=['workers'],
+    resource_deps=['db', 'redis'],
 )
 
 # ----------------------------------------------------------
@@ -92,6 +116,14 @@ local_resource('autogenerate-migration',
 local_resource('seed',
     cmd='docker compose -p tokyoradar exec -T backend python -m scripts.seed_db',
     resource_deps=['backend'],
+    labels=['tasks'],
+    auto_init=False,
+    trigger_mode=TRIGGER_MODE_MANUAL,
+)
+
+local_resource('scrape-nanamica',
+    cmd='docker compose -p tokyoradar exec -T backend python -c "from celery import Celery; c = Celery(broker=\'redis://redis:6379/0\'); c.send_task(\'scraper.tasks.trigger_brand_scrape\', args=[\'nanamica\'], queue=\'scraper\')"',
+    resource_deps=['scraper-worker'],
     labels=['tasks'],
     auto_init=False,
     trigger_mode=TRIGGER_MODE_MANUAL,

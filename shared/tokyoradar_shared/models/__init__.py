@@ -6,6 +6,7 @@ from tokyoradar_shared.models.media import Media
 from tokyoradar_shared.models.price_listing import PriceListing
 from tokyoradar_shared.models.proxy_service import ProxyService
 from tokyoradar_shared.models.retailer import Retailer
+from tokyoradar_shared.models.scrape_job import ScrapeJob
 
 __all__ = [
     "Brand",
@@ -16,4 +17,5 @@ __all__ = [
     "PriceListing",
     "ProxyService",
     "Retailer",
+    "ScrapeJob",
 ]

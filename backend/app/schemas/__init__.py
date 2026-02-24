@@ -12,6 +12,11 @@ from app.schemas.category import (
     CategoryUpdate,
 )
 from app.schemas.common import PaginatedResponse
+from app.schemas.item import (
+    ItemDetailResponse,
+    ItemListResponse,
+    ItemResponse,
+)
 from app.schemas.proxy_service import (
     ProxyServiceBase,
     ProxyServiceCreate,
@@ -24,6 +29,11 @@ from app.schemas.retailer import (
     RetailerResponse,
     RetailerUpdate,
 )
+from app.schemas.scrape_job import (
+    ScrapeJobListResponse,
+    ScrapeJobResponse,
+    ScrapeJobTrigger,
+)
 
 __all__ = [
     "BrandBase",
@@ -35,6 +45,9 @@ __all__ = [
     "CategoryCreate",
     "CategoryResponse",
     "CategoryUpdate",
+    "ItemDetailResponse",
+    "ItemListResponse",
+    "ItemResponse",
     "PaginatedResponse",
     "ProxyServiceBase",
     "ProxyServiceCreate",
@@ -44,4 +57,7 @@ __all__ = [
     "RetailerCreate",
     "RetailerResponse",
     "RetailerUpdate",
+    "ScrapeJobListResponse",
+    "ScrapeJobResponse",
+    "ScrapeJobTrigger",
 ]

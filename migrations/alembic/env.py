@@ -14,6 +14,7 @@ from tokyoradar_shared.models import (  # noqa: F401
     PriceListing,
     ProxyService,
     Retailer,
+    ScrapeJob,
 )
 
 config = context.config

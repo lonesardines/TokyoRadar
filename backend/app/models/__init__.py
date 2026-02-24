@@ -7,6 +7,7 @@ from tokyoradar_shared.models import (  # noqa: F401
     PriceListing,
     ProxyService,
     Retailer,
+    ScrapeJob,
 )
 
 __all__ = [
@@ -18,4 +19,5 @@ __all__ = [
     "PriceListing",
     "ProxyService",
     "Retailer",
+    "ScrapeJob",
 ]

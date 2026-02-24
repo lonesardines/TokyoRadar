@@ -7,12 +7,11 @@ services:
       - ./migrations:/migrations
       - ./data:/app/data
       - ./scripts:/app/scripts
+      - ./scraper:/app/scraper
     environment:
       DEBUG: "true"
 
   scraper-worker:
-    profiles:
-      - worker
     volumes:
       - ./scraper:/app/scraper
       - ./shared:/shared
