@@ -17,7 +17,8 @@ KNOWN_PRODUCT_TYPES = {
     "jacket", "coat", "shirt", "t-shirt", "pants", "trousers", "shorts",
     "sweater", "hoodie", "vest", "bag", "hat", "cap", "accessory", "socks",
     "scarf", "belt", "shoes", "sneakers", "polo", "cardigan", "parka",
-    "blazer", "overshirt", "down jacket", "fleece",
+    "blazer", "overshirt", "down jacket", "fleece", "bottom", "dress",
+    "skirt", "footwear", "knit", "sweat", "top", "outerwear",
 }
 
 

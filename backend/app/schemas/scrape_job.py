@@ -19,7 +19,7 @@ class ScrapeJobResponse(BaseModel):
     items_stored: int | None = None
     items_flagged: int | None = None
     errors: dict | None = None
-    flags: dict | None = None
+    flags: list[dict] | None = None
     config: dict | None = None
     created_at: datetime
 
