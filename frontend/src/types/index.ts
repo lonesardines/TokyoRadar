@@ -173,10 +173,74 @@ export interface AgentJob {
   total_input_tokens?: number;
   total_output_tokens?: number;
   total_cost_usd?: number;
+  has_snapshot?: boolean;
   session_file?: string;
   result?: Record<string, unknown>;
   errors?: Record<string, unknown>;
   created_at: string;
+}
+
+// Agent Snapshot & Compare types
+
+export interface SnapshotMetrics {
+  items_total: number;
+  items_with_images: number;
+  items_with_prices: number;
+  items_in_stock: number;
+  listings_total: number;
+  listings_with_urls: number;
+  channels: string[];
+  channels_count: number;
+  price_range_usd: [number, number] | null;
+  avg_price_usd: number | null;
+}
+
+export interface ToolSummary {
+  total_tool_calls: number;
+  tools_used: Record<string, number>;
+  scrape_results: Record<string, { products_found: number; source_url: string }>;
+  errors: string[];
+}
+
+export interface SnapshotResponse {
+  items: Item[];
+  metrics: SnapshotMetrics | null;
+  tool_summary: ToolSummary | null;
+}
+
+export interface CompareJobSummary {
+  id: number;
+  brand_slug: string;
+  model: string;
+  completed_at: string | null;
+  cost_usd: number | null;
+  metrics: SnapshotMetrics | null;
+}
+
+export interface CompareDeltas {
+  items_total: number | null;
+  items_with_images: number | null;
+  items_with_prices: number | null;
+  items_in_stock: number | null;
+  listings_total: number | null;
+  listings_with_urls: number | null;
+  channels_count: number | null;
+  avg_price_usd: number | null;
+  cost_usd: number | null;
+}
+
+export interface ItemDiff {
+  only_in_a: string[];
+  only_in_b: string[];
+  in_both: number;
+  price_changes: Array<{ name: string; a_price: number; b_price: number }>;
+}
+
+export interface CompareResponse {
+  job_a: CompareJobSummary;
+  job_b: CompareJobSummary;
+  deltas: CompareDeltas;
+  item_diff: ItemDiff;
 }
 
 export interface SessionEntry {

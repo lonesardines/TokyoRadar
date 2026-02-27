@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import {
   ArrowLeft, Bot, Clock, CheckCircle, XCircle, Loader2,
   ChevronDown, ChevronRight, Cpu, Wrench, DollarSign,
-  Zap, MessageSquare, Hash,
+  Zap, MessageSquare, Hash, Package,
 } from 'lucide-react';
 import { getAgentJob, getAgentSession } from '@/api/agent';
 import type { SessionEntry, SessionSummary } from '@/types';
@@ -371,6 +371,7 @@ export default function AdminAgentSessionPage() {
   const statusConfig = STATUS_CONFIG[job.status] || STATUS_CONFIG.pending;
   const StatusIcon = statusConfig.icon;
   const finalText = job.result?.final_text as string | undefined;
+  const hasSnapshot = job.status === 'completed' && job.result?.snapshot;
 
   // Compute apiCallIndex for each entry
   let apiCallCounter = 0;
@@ -394,13 +395,24 @@ export default function AdminAgentSessionPage() {
 
   return (
     <div>
-      <Link
-        to="/admin/agent"
-        className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 mb-4"
-      >
-        <ArrowLeft size={14} />
-        Back to Agent Jobs
-      </Link>
+      <div className="flex items-center justify-between mb-4">
+        <Link
+          to="/admin/agent"
+          className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900"
+        >
+          <ArrowLeft size={14} />
+          Back to Agent Jobs
+        </Link>
+        {hasSnapshot && (
+          <Link
+            to={`/admin/agent/${job.id}/products`}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-neutral-900 text-white rounded-lg hover:bg-neutral-800 transition-colors"
+          >
+            <Package size={14} />
+            View Products
+          </Link>
+        )}
+      </div>
 
       {/* Job Overview Card */}
       <div className={`rounded-lg border p-5 mb-6 ${statusConfig.bg}`}>

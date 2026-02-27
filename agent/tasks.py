@@ -87,6 +87,19 @@ def research_brand(
         # Mark job as completed
         if job_id:
             usage = tracker.summary()
+
+            # Build snapshot of items + metrics from this run
+            from agent.snapshot import build_snapshot
+            try:
+                snapshot = build_snapshot(str(recorder.file), brand_slug)
+            except Exception:
+                logger.exception("Failed to build snapshot for %s", brand_slug)
+                snapshot = None
+
+            job_result = {"final_text": result.final_text}
+            if snapshot:
+                job_result["snapshot"] = snapshot
+
             _update_job_status(
                 job_id,
                 status="completed",
@@ -96,7 +109,7 @@ def research_brand(
                 total_output_tokens=usage.get("total_output_tokens", 0),
                 total_cost_usd=tracker.total_cost,
                 session_file=str(recorder.file),
-                result={"final_text": result.final_text},
+                result=job_result,
             )
 
         return summary

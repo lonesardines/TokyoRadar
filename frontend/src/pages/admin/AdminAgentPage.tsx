@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
-import { Play, CheckCircle, XCircle, Clock, Loader2, Bot } from 'lucide-react';
+import { Play, CheckCircle, XCircle, Clock, Loader2, Bot, GitCompare, Package } from 'lucide-react';
 import { getAgentJobs, triggerAgentResearch, getAgentBrands } from '@/api/agent';
 import type { AgentJob } from '@/types';
 
@@ -49,9 +49,31 @@ export default function AdminAgentPage() {
   const [page, setPage] = useState(1);
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedModel, setSelectedModel] = useState('qwen3.5-plus');
+  const [compareIds, setCompareIds] = useState<Set<number>>(new Set());
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const perPage = 20;
+
+  const toggleCompare = (id: number, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCompareIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else if (next.size < 2) {
+        next.add(id);
+      } else {
+        // Replace the first selected with the new one
+        const arr = Array.from(next);
+        next.delete(arr[0]);
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const canCompare = compareIds.size === 2;
+  const compareIdsArr = Array.from(compareIds).sort((a, b) => a - b);
 
   const { data: brandsData } = useQuery({
     queryKey: ['agent-brands'],
@@ -130,6 +152,15 @@ export default function AdminAgentPage() {
             )}
             Run Research
           </button>
+          {canCompare && (
+            <button
+              onClick={() => navigate(`/admin/agent/compare?a=${compareIdsArr[0]}&b=${compareIdsArr[1]}`)}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <GitCompare size={14} />
+              Compare #{compareIdsArr[0]} vs #{compareIdsArr[1]}
+            </button>
+          )}
         </div>
       </div>
 
@@ -143,6 +174,7 @@ export default function AdminAgentPage() {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-neutral-100 bg-neutral-50">
+              <th className="w-10 px-3 py-3"></th>
               <th className="text-left px-4 py-3 text-xs font-medium text-neutral-500 uppercase tracking-wider">ID</th>
               <th className="text-left px-4 py-3 text-xs font-medium text-neutral-500 uppercase tracking-wider">Brand</th>
               <th className="text-left px-4 py-3 text-xs font-medium text-neutral-500 uppercase tracking-wider">Model</th>
@@ -152,43 +184,67 @@ export default function AdminAgentPage() {
               <th className="text-left px-4 py-3 text-xs font-medium text-neutral-500 uppercase tracking-wider">Cost</th>
               <th className="text-left px-4 py-3 text-xs font-medium text-neutral-500 uppercase tracking-wider">Started</th>
               <th className="text-left px-4 py-3 text-xs font-medium text-neutral-500 uppercase tracking-wider">Duration</th>
+              <th className="w-10 px-3 py-3"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-neutral-100">
             {isLoading ? (
-              <tr><td colSpan={9} className="px-4 py-8 text-center text-neutral-400">Loading...</td></tr>
+              <tr><td colSpan={11} className="px-4 py-8 text-center text-neutral-400">Loading...</td></tr>
             ) : data?.data.length === 0 ? (
               <tr>
-                <td colSpan={9} className="px-4 py-12 text-center">
+                <td colSpan={11} className="px-4 py-12 text-center">
                   <Bot size={32} className="mx-auto text-neutral-300 mb-2" />
                   <p className="text-neutral-400">No agent jobs yet</p>
                   <p className="text-xs text-neutral-300 mt-1">Select a brand and click "Run Research" to start</p>
                 </td>
               </tr>
             ) : (
-              data?.data.map((job) => (
-                <tr
-                  key={job.id}
-                  onClick={() => navigate(`/admin/agent/${job.id}`)}
-                  className="hover:bg-neutral-50 transition-colors cursor-pointer"
-                >
-                  <td className="px-4 py-3 font-mono text-xs text-neutral-500">#{job.id}</td>
-                  <td className="px-4 py-3 text-neutral-700 font-medium">{job.brand_slug}</td>
-                  <td className="px-4 py-3 text-neutral-500 text-xs">{job.model}</td>
-                  <td className="px-4 py-3"><StatusBadge status={job.status} /></td>
-                  <td className="px-4 py-3 text-neutral-600">{job.tool_calls ?? '—'}</td>
-                  <td className="px-4 py-3 text-neutral-600 text-xs">
-                    {formatTokens(job.total_input_tokens, job.total_output_tokens)}
-                  </td>
-                  <td className="px-4 py-3 text-neutral-600 text-xs">{formatCost(job.total_cost_usd)}</td>
-                  <td className="px-4 py-3 text-xs text-neutral-400">
-                    {job.started_at ? new Date(job.started_at).toLocaleString() : '—'}
-                  </td>
-                  <td className="px-4 py-3 text-xs text-neutral-400">
-                    {formatDuration(job.started_at, job.completed_at)}
-                  </td>
-                </tr>
-              ))
+              data?.data.map((job) => {
+                const hasSnapshot = job.status === 'completed' && job.has_snapshot;
+                return (
+                  <tr
+                    key={job.id}
+                    onClick={() => navigate(`/admin/agent/${job.id}`)}
+                    className={`hover:bg-neutral-50 transition-colors cursor-pointer ${compareIds.has(job.id) ? 'bg-blue-50' : ''}`}
+                  >
+                    <td className="px-3 py-3 text-center" onClick={(e) => e.stopPropagation()}>
+                      <input
+                        type="checkbox"
+                        checked={compareIds.has(job.id)}
+                        onChange={() => {}}
+                        onClick={(e) => toggleCompare(job.id, e)}
+                        className="w-3.5 h-3.5 rounded border-neutral-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                      />
+                    </td>
+                    <td className="px-4 py-3 font-mono text-xs text-neutral-500">#{job.id}</td>
+                    <td className="px-4 py-3 text-neutral-700 font-medium">{job.brand_slug}</td>
+                    <td className="px-4 py-3 text-neutral-500 text-xs">{job.model}</td>
+                    <td className="px-4 py-3"><StatusBadge status={job.status} /></td>
+                    <td className="px-4 py-3 text-neutral-600">{job.tool_calls ?? '—'}</td>
+                    <td className="px-4 py-3 text-neutral-600 text-xs">
+                      {formatTokens(job.total_input_tokens, job.total_output_tokens)}
+                    </td>
+                    <td className="px-4 py-3 text-neutral-600 text-xs">{formatCost(job.total_cost_usd)}</td>
+                    <td className="px-4 py-3 text-xs text-neutral-400">
+                      {job.started_at ? new Date(job.started_at).toLocaleString() : '—'}
+                    </td>
+                    <td className="px-4 py-3 text-xs text-neutral-400">
+                      {formatDuration(job.started_at, job.completed_at)}
+                    </td>
+                    <td className="px-3 py-3" onClick={(e) => e.stopPropagation()}>
+                      {hasSnapshot && (
+                        <button
+                          onClick={() => navigate(`/admin/agent/${job.id}/products`)}
+                          className="p-1.5 text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-colors"
+                          title="View Products"
+                        >
+                          <Package size={14} />
+                        </button>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })
             )}
           </tbody>
         </table>

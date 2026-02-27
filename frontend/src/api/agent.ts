@@ -1,5 +1,5 @@
 import apiClient from './client';
-import type { PaginatedResponse, AgentJob, SessionData } from '@/types';
+import type { PaginatedResponse, AgentJob, SessionData, SnapshotResponse, CompareResponse } from '@/types';
 
 export interface AgentJobTriggerParams {
   brand_slug: string;
@@ -35,5 +35,17 @@ export async function getAgentSession(id: number): Promise<SessionData> {
 
 export async function getAgentBrands(): Promise<{ brands: string[] }> {
   const { data } = await apiClient.get<{ brands: string[] }>('/admin/agent-brands');
+  return data;
+}
+
+export async function getAgentSnapshot(jobId: number): Promise<SnapshotResponse> {
+  const { data } = await apiClient.get<SnapshotResponse>(`/admin/agent-jobs/${jobId}/snapshot`);
+  return data;
+}
+
+export async function compareAgentJobs(jobA: number, jobB: number): Promise<CompareResponse> {
+  const { data } = await apiClient.get<CompareResponse>('/admin/agent-jobs/compare', {
+    params: { job_a: jobA, job_b: jobB },
+  });
   return data;
 }
