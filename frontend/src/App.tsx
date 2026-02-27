@@ -11,6 +11,8 @@ import AdminItemsPage from '@/pages/admin/AdminItemsPage';
 import AdminScrapeJobsPage from '@/pages/admin/AdminScrapeJobsPage';
 import AdminFlaggedPage from '@/pages/admin/AdminFlaggedPage';
 import AdminItemDetailPage from '@/pages/admin/AdminItemDetailPage';
+import AdminAgentPage from '@/pages/admin/AdminAgentPage';
+import AdminAgentSessionPage from '@/pages/admin/AdminAgentSessionPage';
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="items" element={<AdminItemsPage />} />
         <Route path="items/:id" element={<AdminItemDetailPage />} />
         <Route path="scrape-jobs" element={<AdminScrapeJobsPage />} />
+        <Route path="agent" element={<AdminAgentPage />} />
+        <Route path="agent/:id" element={<AdminAgentSessionPage />} />
         <Route path="flagged" element={<AdminFlaggedPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />

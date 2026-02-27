@@ -7,6 +7,7 @@ import ShippingBadge from '@/components/common/ShippingBadge';
 import PriceRangeBadge from '@/components/common/PriceRangeBadge';
 import StyleTag from '@/components/common/StyleTag';
 import BuyGuideCard from '@/components/brand/BuyGuideCard';
+import BrandProducts from '@/components/brand/BrandProducts';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
 
 export default function BrandDetailPage() {
@@ -92,6 +93,8 @@ export default function BrandDetailPage() {
           <BuyGuideCard guide={brand.buy_guide} />
         </div>
       )}
+
+      <BrandProducts slug={slug!} />
 
       <div className="flex flex-wrap gap-3">
         {brand.website_jp && (

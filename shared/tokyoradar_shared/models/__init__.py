@@ -1,3 +1,4 @@
+from tokyoradar_shared.models.agent_job import AgentJob
 from tokyoradar_shared.models.brand import Brand
 from tokyoradar_shared.models.category import Category
 from tokyoradar_shared.models.collection import Collection
@@ -9,6 +10,7 @@ from tokyoradar_shared.models.retailer import Retailer
 from tokyoradar_shared.models.scrape_job import ScrapeJob
 
 __all__ = [
+    "AgentJob",
     "Brand",
     "Category",
     "Collection",

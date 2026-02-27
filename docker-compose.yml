@@ -75,6 +75,39 @@ services:
       redis:
         condition: service_healthy
 
+  scraper-mcp:
+    image: tokyoradar-scraper
+    command: ["python", "-m", "scraper.mcp_server"]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tokyoradar}:${POSTGRES_PASSWORD:-changeme}@db:5432/${POSTGRES_DB:-tokyoradar}
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8001:8001"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  agent-worker:
+    image: tokyoradar-agent
+    build:
+      context: .
+      dockerfile: agent/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tokyoradar}:${POSTGRES_PASSWORD:-changeme}@db:5432/${POSTGRES_DB:-tokyoradar}
+      REDIS_URL: redis://redis:6379/0
+      DASHSCOPE_API_KEY: ${DASHSCOPE_API_KEY:-}
+      SCRAPER_MCP_URL: http://scraper-mcp:8001/mcp
+      BACKEND_MCP_URL: http://backend:8000/mcp
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      scraper-mcp:
+        condition: service_started
+
   frontend:
     image: tokyoradar-frontend
     build: ./frontend

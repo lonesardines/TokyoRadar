@@ -53,6 +53,19 @@ const zh: Record<string, string> = {
   'brand.jpWebsite': '日本官网',
   'brand.usWebsite': '美国官网',
   'brand.howToBuy': '购买渠道',
+  'brand.products': '商品',
+  'brand.productsCount': '{count} 件商品',
+  'brand.allTypes': '全部类型',
+  'brand.allSeasons': '全部季节',
+  'brand.inStockOnly': '仅有货',
+  'brand.noProducts': '未找到符合筛选条件的商品。',
+  'brand.viewProduct': '查看商品',
+  'brand.officialPrice': '官方',
+  'brand.channels': '{count} 个渠道',
+  'brand.cheaper': '便宜 {pct}%',
+  'brand.moreExpensive': '贵 {pct}%',
+  'brand.samePrice': '同价',
+  'brand.compareChannels': '渠道比价',
 
   // RetailersPage
   'retailers.title': '零售商',
@@ -122,6 +135,21 @@ const zh: Record<string, string> = {
   // BrandGrid
   'brands.emptyState': '未找到符合条件的品牌。',
   'brands.adjustFilters': '试试调整筛选条件。',
+
+  // Admin Agent
+  'admin.agent.title': 'Agent 研究',
+  'admin.agent.subtitle': 'AI 驱动的品牌全渠道研究',
+  'admin.agent.runResearch': '运行研究',
+  'admin.agent.noJobs': '暂无 Agent 任务',
+  'admin.agent.selectBrand': '选择品牌并点击"运行研究"开始',
+  'admin.agent.backToJobs': '返回任务列表',
+  'admin.agent.sessionTimeline': 'Session 时间线',
+  'admin.agent.result': '结果',
+  'admin.agent.errors': '错误',
+  'admin.agent.duration': '耗时',
+  'admin.agent.toolCalls': '工具调用',
+  'admin.agent.tokens': 'Token 用量',
+  'admin.agent.cost': '费用',
 };
 
 export default zh;

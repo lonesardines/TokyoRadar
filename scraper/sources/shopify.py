@@ -8,6 +8,8 @@ logger = logging.getLogger(__name__)
 
 # Regex for season codes like 26SS, 25AW, 25FW
 SEASON_CODE_RE = re.compile(r"\b(\d{2}(?:SS|AW|FW|PF))\b", re.IGNORECASE)
+# Regex for long-form season codes like "2026 SS", "2025 FW"
+SEASON_LONG_RE = re.compile(r"\b(20(\d{2}))\s+(SS|AW|FW|PF)\b", re.IGNORECASE)
 
 # Color keywords to extract from tags/title
 COLOR_KEYWORDS = {
@@ -76,8 +78,9 @@ class ShopifyBrandScraper(BrandScraper):
         # Stock: true if any variant is available
         in_stock = any(v.get("available", False) for v in variants)
 
-        # Season code from tags or title
-        season_code = self._extract_season_code(tags, title)
+        # Season code from tags, title, or vendor
+        vendor = p.get("vendor") or ""
+        season_code = self._extract_season_code(tags, title, vendor)
 
         # Colors from tags
         colors = self._extract_colors(tags, title)
@@ -129,16 +132,21 @@ class ShopifyBrandScraper(BrandScraper):
                         seen.add(val)
         return sizes
 
-    def _extract_season_code(self, tags: list[str], title: str) -> str | None:
-        # Check tags first
+    def _extract_season_code(self, tags: list[str], title: str, vendor: str = "") -> str | None:
+        # Check tags first (short form like 26SS)
         for tag in tags:
             m = SEASON_CODE_RE.search(tag)
             if m:
                 return m.group(1).upper()
         # Then title
-        m = SEASON_CODE_RE.search(title)
-        if m:
-            return m.group(1).upper()
+        for text in (title, vendor):
+            m = SEASON_CODE_RE.search(text)
+            if m:
+                return m.group(1).upper()
+            # Long form like "2026 SS" → "26SS"
+            m = SEASON_LONG_RE.search(text)
+            if m:
+                return (m.group(2) + m.group(3)).upper()
         return None
 
     def _extract_colors(self, tags: list[str], title: str) -> list[str]:

@@ -8,6 +8,7 @@ services:
       - ./data:/app/data
       - ./scripts:/app/scripts
       - ./scraper:/app/scraper
+      - ./sessions:/app/sessions:ro
     environment:
       DEBUG: "true"
 
@@ -22,6 +23,19 @@ services:
     volumes:
       - ./ai_pipeline:/app/ai_pipeline
       - ./shared:/shared
+
+  scraper-mcp:
+    volumes:
+      - ./scraper:/app/scraper
+      - ./shared:/shared
+
+  agent-worker:
+    environment:
+      PYTHONPATH: /app
+    volumes:
+      - ./agent:/app/agent
+      - ./shared:/shared
+      - ./sessions:/app/sessions
 
   frontend:
     image: tokyoradar-frontend-dev

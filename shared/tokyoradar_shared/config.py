@@ -8,7 +8,10 @@ class Settings(BaseSettings):
     DEBUG: bool = False
     SECRET_KEY: str = "change-me-in-production"
     DASHSCOPE_API_KEY: str = ""
+    DASHSCOPE_BASE_URL: str = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
     JAPAN_PROXY_URL: str = ""
+    SCRAPER_MCP_URL: str = "http://scraper-mcp:8001/mcp"
+    BACKEND_MCP_URL: str = "http://backend:8000/mcp"
 
     @property
     def cors_origins_list(self) -> list[str]:

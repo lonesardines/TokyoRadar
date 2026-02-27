@@ -53,6 +53,19 @@ const en: Record<string, string> = {
   'brand.jpWebsite': 'JP Website',
   'brand.usWebsite': 'US Website',
   'brand.howToBuy': 'How to Buy',
+  'brand.products': 'Products',
+  'brand.productsCount': '{count} items',
+  'brand.allTypes': 'All Types',
+  'brand.allSeasons': 'All Seasons',
+  'brand.inStockOnly': 'In Stock Only',
+  'brand.noProducts': 'No products found matching your filters.',
+  'brand.viewProduct': 'View Product',
+  'brand.officialPrice': 'Official',
+  'brand.channels': '{count} channels',
+  'brand.cheaper': '{pct}% less',
+  'brand.moreExpensive': '{pct}% more',
+  'brand.samePrice': 'Same price',
+  'brand.compareChannels': 'Compare Channels',
 
   // RetailersPage
   'retailers.title': 'Retailers',
@@ -122,6 +135,21 @@ const en: Record<string, string> = {
   // BrandGrid
   'brands.emptyState': 'No brands found matching your criteria.',
   'brands.adjustFilters': 'Try adjusting your filters.',
+
+  // Admin Agent
+  'admin.agent.title': 'Agent Research',
+  'admin.agent.subtitle': 'AI-powered brand research across all channels',
+  'admin.agent.runResearch': 'Run Research',
+  'admin.agent.noJobs': 'No agent jobs yet',
+  'admin.agent.selectBrand': 'Select a brand and click "Run Research" to start',
+  'admin.agent.backToJobs': 'Back to Agent Jobs',
+  'admin.agent.sessionTimeline': 'Session Timeline',
+  'admin.agent.result': 'Result',
+  'admin.agent.errors': 'Errors',
+  'admin.agent.duration': 'Duration',
+  'admin.agent.toolCalls': 'Tool calls',
+  'admin.agent.tokens': 'Tokens',
+  'admin.agent.cost': 'Cost',
 };
 
 export default en;

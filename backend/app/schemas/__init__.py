@@ -1,3 +1,10 @@
+from app.schemas.agent_job import (
+    AgentJobListResponse,
+    AgentJobResponse,
+    AgentJobTrigger,
+    SessionEntry,
+    SessionResponse,
+)
 from app.schemas.brand import (
     BrandBase,
     BrandCreate,
@@ -16,6 +23,7 @@ from app.schemas.item import (
     ItemDetailResponse,
     ItemListResponse,
     ItemResponse,
+    PriceListingResponse,
 )
 from app.schemas.proxy_service import (
     ProxyServiceBase,
@@ -36,6 +44,9 @@ from app.schemas.scrape_job import (
 )
 
 __all__ = [
+    "AgentJobListResponse",
+    "AgentJobResponse",
+    "AgentJobTrigger",
     "BrandBase",
     "BrandCreate",
     "BrandListResponse",
@@ -48,6 +59,7 @@ __all__ = [
     "ItemDetailResponse",
     "ItemListResponse",
     "ItemResponse",
+    "PriceListingResponse",
     "PaginatedResponse",
     "ProxyServiceBase",
     "ProxyServiceCreate",
@@ -57,6 +69,8 @@ __all__ = [
     "RetailerCreate",
     "RetailerResponse",
     "RetailerUpdate",
+    "SessionEntry",
+    "SessionResponse",
     "ScrapeJobListResponse",
     "ScrapeJobResponse",
     "ScrapeJobTrigger",

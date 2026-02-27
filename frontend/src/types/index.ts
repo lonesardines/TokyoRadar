@@ -83,6 +83,18 @@ export interface Category {
   children?: Category[] | null;
 }
 
+export interface PriceListing {
+  id: number;
+  retailer_slug: string;
+  retailer_name: string;
+  price_jpy: number | null;
+  price_usd: number | null;
+  in_stock: boolean;
+  available_sizes: string[] | null;
+  url: string | null;
+  last_checked_at: string | null;
+}
+
 // Phase 2: Items + ScrapeJobs
 
 export interface Item {
@@ -108,6 +120,7 @@ export interface Item {
   season_code: string | null;
   sku: string | null;
   in_stock: boolean | null;
+  price_listings: PriceListing[];
   created_at: string;
   updated_at: string | null;
 }
@@ -144,4 +157,64 @@ export interface ValidationFlag {
   field: string;
   severity: 'warning' | 'error';
   message: string;
+}
+
+// Agent Jobs
+
+export interface AgentJob {
+  id: number;
+  brand_slug: string;
+  model: string;
+  status: 'pending' | 'running' | 'completed' | 'failed';
+  celery_task_id?: string;
+  started_at?: string;
+  completed_at?: string;
+  tool_calls?: number;
+  total_input_tokens?: number;
+  total_output_tokens?: number;
+  total_cost_usd?: number;
+  session_file?: string;
+  result?: Record<string, unknown>;
+  errors?: Record<string, unknown>;
+  created_at: string;
+}
+
+export interface SessionEntry {
+  type: 'api_call' | 'tool_exec';
+  timestamp?: string;
+  // api_call fields
+  model?: string;
+  usage?: { prompt_tokens?: number; completion_tokens?: number };
+  latency_ms?: number;
+  cost_usd?: number;
+  finish_reason?: string;
+  content?: string;
+  tool_calls?: Array<{ id?: string; name?: string; arguments?: string }>;
+  request_messages?: Array<{ role: string; content?: string; tool_call_id?: string }>;
+  cumulative_input_tokens?: number;
+  cumulative_output_tokens?: number;
+  cumulative_cost_usd?: number;
+  // tool_exec fields
+  name?: string;
+  input?: Record<string, unknown> | string;
+  output?: Record<string, unknown> | string;
+  duration_ms?: number;
+}
+
+export interface SessionSummary {
+  total_entries: number;
+  api_calls: number;
+  tool_execs: number;
+  total_input_tokens: number;
+  total_output_tokens: number;
+  total_tokens: number;
+  total_cost_usd: number;
+  total_latency_ms: number;
+  total_tool_duration_ms: number;
+  avg_latency_ms: number;
+}
+
+export interface SessionData {
+  entries: SessionEntry[];
+  summary: SessionSummary;
 }

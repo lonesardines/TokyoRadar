@@ -67,6 +67,38 @@ dc_resource('scraper-worker',
 )
 
 # ----------------------------------------------------------
+# Scraper MCP Server: exposes scraping tools via MCP
+# ----------------------------------------------------------
+dc_resource('scraper-mcp',
+    labels=['workers'],
+    resource_deps=['db', 'redis'],
+    links=[link('http://localhost:8001/mcp', 'Scraper MCP')],
+)
+
+# ----------------------------------------------------------
+# Agent Worker: LLM orchestrator (pure MCP client)
+# ----------------------------------------------------------
+docker_build(
+    'tokyoradar-agent',
+    context='.',
+    dockerfile='./agent/Dockerfile',
+    only=['./agent/', './shared/'],
+    live_update=[
+        sync('./agent/', '/app/agent/'),
+        sync('./shared/', '/shared/'),
+        run(
+            'pip install /shared && pip install -r /app/agent-requirements.txt',
+            trigger=['./agent/requirements.txt', './shared/pyproject.toml'],
+        ),
+    ],
+)
+
+dc_resource('agent-worker',
+    labels=['workers'],
+    resource_deps=['db', 'redis', 'scraper-mcp'],
+)
+
+# ----------------------------------------------------------
 # Frontend: Vite dev server + HMR
 # ----------------------------------------------------------
 docker_build(
@@ -124,6 +156,14 @@ local_resource('seed',
 local_resource('scrape-nanamica',
     cmd='docker compose -p tokyoradar exec -T backend python -c "from celery import Celery; c = Celery(broker=\'redis://redis:6379/0\'); c.send_task(\'scraper.tasks.trigger_brand_scrape\', args=[\'nanamica\'], queue=\'scraper\')"',
     resource_deps=['scraper-worker'],
+    labels=['tasks'],
+    auto_init=False,
+    trigger_mode=TRIGGER_MODE_MANUAL,
+)
+
+local_resource('agent-research-nanamica',
+    cmd='docker compose -p tokyoradar exec -T agent-worker python -c "from celery import Celery; c = Celery(broker=\'redis://redis:6379/0\'); c.send_task(\'agent.tasks.research_brand\', args=[\'nanamica\'], queue=\'agent\')"',
+    resource_deps=['agent-worker'],
     labels=['tasks'],
     auto_init=False,
     trigger_mode=TRIGGER_MODE_MANUAL,

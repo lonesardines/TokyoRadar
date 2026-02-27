@@ -1,9 +1,10 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { Package, Activity, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { Package, Activity, AlertTriangle, ArrowLeft, Bot } from 'lucide-react';
 
 const navItems = [
   { to: '/admin/items', label: 'Items', icon: Package },
   { to: '/admin/scrape-jobs', label: 'Scrape Jobs', icon: Activity },
+  { to: '/admin/agent', label: 'Agent', icon: Bot },
   { to: '/admin/flagged', label: 'Flagged Items', icon: AlertTriangle },
 ];
 

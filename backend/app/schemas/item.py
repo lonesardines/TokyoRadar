@@ -4,6 +4,20 @@ from decimal import Decimal
 from pydantic import BaseModel, ConfigDict
 
 
+class PriceListingResponse(BaseModel):
+    id: int
+    retailer_slug: str
+    retailer_name: str
+    price_jpy: int | None = None
+    price_usd: Decimal | None = None
+    in_stock: bool = True
+    available_sizes: list[str] | None = None
+    url: str | None = None
+    last_checked_at: datetime | None = None
+
+    model_config = ConfigDict(from_attributes=True)
+
+
 class ItemResponse(BaseModel):
     id: int
     brand_id: int
@@ -27,6 +41,7 @@ class ItemResponse(BaseModel):
     season_code: str | None = None
     sku: str | None = None
     in_stock: bool | None = None
+    price_listings: list[PriceListingResponse] = []
     created_at: datetime
     updated_at: datetime | None = None
 
