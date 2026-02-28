@@ -220,6 +220,12 @@ MODEL_COSTS: dict[str, tuple[float, float]] = {
     "qwen-turbo": (0.05, 0.20),
     "qwen-flash": (0.05, 0.40),
     "qwen3.5-plus": (0.40, 2.40),
+    # Gemini pricing per 1M tokens (USD)
+    "gemini-2.5-flash-lite": (0.10, 0.40),
+    "gemini-2.5-flash": (0.30, 2.50),
+    "gemini-2.5-pro": (1.25, 10.00),
+    "gemini-3-flash-preview": (0.50, 3.00),
+    "gemini-3.1-pro-preview": (2.00, 12.00),
 }
 
 

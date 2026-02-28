@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "change-me-in-production"
     DASHSCOPE_API_KEY: str = ""
     DASHSCOPE_BASE_URL: str = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+    GEMINI_API_KEY: str = ""
+    GEMINI_BASE_URL: str = "https://generativelanguage.googleapis.com/v1beta/openai/"
     JAPAN_PROXY_URL: str = ""
     SCRAPER_MCP_URL: str = "http://scraper-mcp:8001/mcp"
     BACKEND_MCP_URL: str = "http://backend:8000/mcp"

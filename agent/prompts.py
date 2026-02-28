@@ -39,7 +39,10 @@ STEP 3 — Scrape channels:
   fetch_page is ONLY for single product detail pages or non-product discovery pages.
   If detect_platform returns "generic", you MUST use crawl_products.
 
-  After scraping, call save_items(brand_slug, [...]) to persist products.
+  After scraping, call save_items(brand_slug, [...]) to persist ALL products.
+  CRITICAL: Include EVERY product from the crawl CSV — do NOT skip or filter items.
+  Pass ALL fields from the CSV: name, price, currency, image_url, source_url.
+  save_items handles deduplication internally — just pass everything.
   save_items returns item IDs needed for STEP 4.
 
 STEP 4 — Save price listings:
@@ -145,6 +148,11 @@ ABSOLUTE RULES — violating these corrupts the database:
 6. Use EXACT buy_guide URLs — do NOT modify paths, locales, or query parameters.
 
 7. If crawl_products or fetch_page returned product images, include primary_image_url in save_items.
+8. save_items field mapping from crawl_products CSV:
+   - name → name, price+currency → price_jpy (if JPY) or price_usd (if USD)
+   - image_url → primary_image_url, product_url → source_url, in_stock → in_stock
+9. Save ALL items from EVERY crawl source. Do NOT cherry-pick or filter products.
+   The database handles deduplication — your job is to pass everything through.
 </data_integrity>
 
 <constraints>

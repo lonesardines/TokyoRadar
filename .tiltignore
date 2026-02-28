@@ -1,0 +1,6 @@
+**/__pycache__
+**/*.pyc
+sessions/
+frontend/node_modules/
+frontend/dist/
+.git/

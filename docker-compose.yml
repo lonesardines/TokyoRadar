@@ -98,6 +98,7 @@ services:
       DATABASE_URL: postgresql://${POSTGRES_USER:-tokyoradar}:${POSTGRES_PASSWORD:-changeme}@db:5432/${POSTGRES_DB:-tokyoradar}
       REDIS_URL: redis://redis:6379/0
       DASHSCOPE_API_KEY: ${DASHSCOPE_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       SCRAPER_MCP_URL: http://scraper-mcp:8001/mcp
       BACKEND_MCP_URL: http://backend:8000/mcp
     depends_on:

@@ -43,12 +43,22 @@ function formatCost(cost?: number): string {
   return `$${cost.toFixed(4)}`;
 }
 
-const MODEL_OPTIONS = ['qwen3.5-plus', 'qwen-max', 'qwen-plus', 'qwen-plus-latest', 'qwen-turbo'];
+const MODEL_OPTIONS: { id: string; label: string; price: string }[] = [
+  { id: 'gemini-2.5-flash-lite', label: 'Gemini 2.5 Flash Lite', price: '$0.10 / $0.40' },
+  { id: 'gemini-2.5-flash',      label: 'Gemini 2.5 Flash',      price: '$0.30 / $2.50' },
+  { id: 'gemini-3-flash-preview',label: 'Gemini 3 Flash',        price: '$0.50 / $3.00' },
+  { id: 'gemini-2.5-pro',        label: 'Gemini 2.5 Pro',        price: '$1.25 / $10.00' },
+  { id: 'gemini-3.1-pro-preview',label: 'Gemini 3.1 Pro',        price: '$2.00 / $12.00' },
+  { id: 'qwen3.5-plus',          label: 'Qwen 3.5 Plus',         price: '$0.40 / $2.40' },
+  { id: 'qwen-max',              label: 'Qwen Max',              price: '$1.20 / $6.00' },
+  { id: 'qwen-plus',             label: 'Qwen Plus',             price: '$0.40 / $1.20' },
+  { id: 'qwen-turbo',            label: 'Qwen Turbo',            price: '$0.05 / $0.20' },
+];
 
 export default function AdminAgentPage() {
   const [page, setPage] = useState(1);
   const [selectedBrand, setSelectedBrand] = useState('');
-  const [selectedModel, setSelectedModel] = useState('qwen3.5-plus');
+  const [selectedModel, setSelectedModel] = useState('gemini-2.5-flash');
   const [compareIds, setCompareIds] = useState<Set<number>>(new Set());
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -132,7 +142,7 @@ export default function AdminAgentPage() {
             className="px-3 py-2 text-sm border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900"
           >
             {MODEL_OPTIONS.map((m) => (
-              <option key={m} value={m}>{m}</option>
+              <option key={m.id} value={m.id}>{m.label} — {m.price}</option>
             ))}
           </select>
           <button

@@ -352,6 +352,26 @@ export default function AdminAgentSessionPage() {
     },
   });
 
+  // Compute apiCallIndex for each entry
+  let apiCallCounter = 0;
+  const entriesWithIndex = (session?.entries || []).map((entry) => {
+    if (entry.type === 'api_call') {
+      return { entry, apiCallIndex: apiCallCounter++ };
+    }
+    return { entry, apiCallIndex: -1 };
+  });
+
+  // Auto-scroll to bottom of timeline when new entries appear during running
+  const timelineEndRef = useRef<HTMLDivElement>(null);
+  const prevEntryCount = useRef(0);
+  useEffect(() => {
+    const currentCount = entriesWithIndex.length;
+    if (isRunning && currentCount > prevEntryCount.current) {
+      timelineEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    prevEntryCount.current = currentCount;
+  }, [entriesWithIndex.length, isRunning]);
+
   if (jobLoading) {
     return (
       <div className="flex items-center justify-center py-20">
@@ -372,26 +392,6 @@ export default function AdminAgentSessionPage() {
   const StatusIcon = statusConfig.icon;
   const finalText = job.result?.final_text as string | undefined;
   const hasSnapshot = job.status === 'completed' && job.result?.snapshot;
-
-  // Compute apiCallIndex for each entry
-  let apiCallCounter = 0;
-  const entriesWithIndex = (session?.entries || []).map((entry) => {
-    if (entry.type === 'api_call') {
-      return { entry, apiCallIndex: apiCallCounter++ };
-    }
-    return { entry, apiCallIndex: -1 };
-  });
-
-  // Auto-scroll to bottom of timeline when new entries appear during running
-  const timelineEndRef = useRef<HTMLDivElement>(null);
-  const prevEntryCount = useRef(0);
-  useEffect(() => {
-    const currentCount = entriesWithIndex.length;
-    if (isRunning && currentCount > prevEntryCount.current) {
-      timelineEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-    prevEntryCount.current = currentCount;
-  }, [entriesWithIndex.length, isRunning]);
 
   return (
     <div>

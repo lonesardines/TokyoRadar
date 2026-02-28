@@ -8,6 +8,7 @@ from mcp.server.fastmcp import FastMCP
 
 from scraper.mcp_helpers import (
     FETCH_PAGE_MAX_CHARS,
+    _build_href_image_map,
     _clean_html,
     _extract_image_urls,
     _extract_jsonld_products,
@@ -265,6 +266,22 @@ def crawl_products(
     seen_names: set[str] = set()
     seen_urls: set[str] = set()  # deduplicate by URL path (ignoring query params)
 
+    # Extract locale prefix from start_url (e.g. /en-us from SSENSE)
+    _locale_match = re.match(r'^(/[a-z]{2}-[a-z]{2})/', urlparse(start_url).path)
+    _locale_prefix = _locale_match.group(1) if _locale_match else ""
+
+    def _fix_locale(product_url: str) -> str:
+        """Inject locale prefix for same-domain URLs that are missing it."""
+        if not _locale_prefix or not product_url:
+            return product_url
+        parsed = urlparse(product_url)
+        # Only fix same-domain or relative URLs
+        if parsed.netloc and parsed.netloc not in allowed_domains:
+            return product_url
+        if not parsed.path.startswith(_locale_prefix):
+            product_url = product_url.replace(parsed.path, _locale_prefix + parsed.path, 1)
+        return product_url
+
     while queue and pages_fetched < max_pages:
         url = queue.pop(0)
         if url in visited:
@@ -291,6 +308,9 @@ def crawl_products(
 
         if "html" not in content_type and "html" not in raw_html[:200].lower():
             continue
+
+        # Pre-build href→image map for this page
+        href_image_map = _build_href_image_map(raw_html, url)
 
         # 1) Extract JSON-LD products
         json_ld_blocks = re.findall(
@@ -331,6 +351,7 @@ def crawl_products(
                 prod_url = offers.get("url") or item.get("url", "")
                 if prod_url and not prod_url.startswith("http"):
                     prod_url = urljoin(url, prod_url)
+                prod_url = _fix_locale(prod_url)
                 image = ""
                 img_field = item.get("image")
                 if isinstance(img_field, str):
@@ -387,25 +408,32 @@ def crawl_products(
                 price_val = usd_str.replace(",", "")
                 currency = "USD"
 
-            # Try to find a corresponding product image near this link
-            img_url = ""
-            # Look for <img> inside <a> tag in raw HTML
-            link_pattern = re.compile(
-                re.escape(href) + r'[^>]*>.*?<img[^>]+src=["\']([^"\']+)["\']',
-                re.DOTALL | re.IGNORECASE,
-            )
-            img_match = link_pattern.search(raw_html)
-            if img_match:
-                img_url = img_match.group(1)
-                if img_url.startswith("//"):
-                    img_url = "https:" + img_url
+            # Find product image: primary from pre-built map, fallback by href path
+            img_url = href_image_map.get(href, "")
+            if not img_url:
+                # Fallback: search raw HTML by href path (handles relative vs absolute mismatch)
+                href_path = urlparse(href).path
+                if href_path:
+                    fallback_pattern = re.compile(
+                        re.escape(href_path) + r'["\'][^>]*>'
+                        r'(?:(?!</a>).)*?'
+                        r'<img[^>]+src=["\']([^"\']+)["\']',
+                        re.DOTALL | re.IGNORECASE,
+                    )
+                    fb_match = fallback_pattern.search(raw_html)
+                    if fb_match:
+                        img_url = fb_match.group(1)
+                        if img_url.startswith("//"):
+                            img_url = "https:" + img_url
+                        elif not img_url.startswith("http"):
+                            img_url = urljoin(url, img_url)
 
             all_products.append({
                 "name": name_part,
                 "price": price_val,
                 "currency": currency,
                 "image_url": img_url,
-                "product_url": href,
+                "product_url": _fix_locale(href),
                 "in_stock": "True",
             })
 

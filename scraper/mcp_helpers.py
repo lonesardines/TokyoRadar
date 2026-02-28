@@ -179,6 +179,53 @@ def _extract_jsonld_products(json_ld_blocks: list[str]) -> str | None:
     return _products_to_csv(products, ["name", "id", "price", "in_stock", "url"])
 
 
+def _build_href_image_map(html: str, base_url: str) -> dict[str, str]:
+    """Scan all <a> tags containing <img> tags and build {resolved_href: image_url}.
+
+    Handles the common Japanese e-commerce pattern where the image and text
+    are in sibling <a> tags sharing the same href:
+        <a href="/item/123"><img src="product.jpg"></a>
+        <a href="/item/123">Product Name ¥55,000</a>
+    """
+    from urllib.parse import urljoin
+
+    # Match <a href="...">...<img ...src="...">...</a> (image inside link)
+    pattern = re.compile(
+        r'<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>'
+        r'(?:(?!</a>).)*?'
+        r'<img[^>]+src=["\']([^"\']+)["\']'
+        r'(?:(?!</a>).)*?'
+        r'</a>',
+        re.DOTALL | re.IGNORECASE,
+    )
+
+    skip_keywords = (
+        "data:image", ".svg", "1x1", "pixel", "spacer", "blank",
+        "icon", "logo", "badge", "flag", "arrow", "spinner",
+    )
+
+    href_map: dict[str, str] = {}
+    for href, img_src in pattern.findall(html):
+        if href.startswith(("javascript:", "mailto:", "tel:")):
+            continue
+        img_lower = img_src.lower()
+        if any(kw in img_lower for kw in skip_keywords):
+            continue
+
+        resolved_href = urljoin(base_url, href)
+        if resolved_href in href_map:
+            continue  # keep first image per href
+
+        if img_src.startswith("//"):
+            img_src = "https:" + img_src
+        elif not img_src.startswith("http"):
+            img_src = urljoin(base_url, img_src)
+
+        href_map[resolved_href] = img_src
+
+    return href_map
+
+
 def _products_to_csv(products: list[dict], fields: list[str]) -> str:
     """Serialize products as compact CSV text (40-50% fewer tokens than JSON)."""
     lines = ["|".join(fields)]

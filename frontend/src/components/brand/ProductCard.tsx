@@ -12,11 +12,12 @@ const MAX_SIZES = 4;
 function PriceComparisonRow({ listing, officialPrice }: { listing: PriceListing; officialPrice: number | null }) {
   const t = useT();
   const retailerPrice = listing.price_usd != null ? Number(listing.price_usd) : null;
+  const isOfficial = listing.retailer_slug === 'brand-official-jp';
 
   let diffLabel = '';
   let diffColor = 'text-neutral-400';
 
-  if (retailerPrice != null && officialPrice != null && officialPrice > 0) {
+  if (retailerPrice != null && officialPrice != null && officialPrice > 0 && !isOfficial) {
     const pct = Math.round(((retailerPrice - officialPrice) / officialPrice) * 100);
     if (pct < 0) {
       diffLabel = t('brand.cheaper', { pct: String(Math.abs(pct)) });
@@ -33,7 +34,7 @@ function PriceComparisonRow({ listing, officialPrice }: { listing: PriceListing;
   const row = (
     <div className="flex items-center justify-between gap-2 py-1">
       <span className="text-[11px] text-neutral-600 truncate max-w-[80px]">
-        {listing.retailer_name}
+        {listing.retailer_name}{isOfficial ? ' (Official)' : ''}
       </span>
       <div className="flex items-center gap-1.5">
         {retailerPrice != null && (
@@ -72,11 +73,7 @@ const ProductCard = memo(function ProductCard({ item }: ProductCardProps) {
     ? item.sizes.length - MAX_SIZES
     : 0;
 
-  const allListings = item.price_listings ?? [];
-  // Filter out official/self-store listings — their price is already shown as the main price
-  const OFFICIAL_SLUGS = new Set(['nanamica-us', 'brand-official-jp']);
-  const listings = allListings.filter(l => !OFFICIAL_SLUGS.has(l.retailer_slug));
-  const officialListing = allListings.find(l => OFFICIAL_SLUGS.has(l.retailer_slug));
+  const listings = item.price_listings ?? [];
   const hasListings = listings.length > 0;
   const officialPrice = item.price_usd != null ? Number(item.price_usd) : null;
 
@@ -108,7 +105,7 @@ const ProductCard = memo(function ProductCard({ item }: ProductCardProps) {
         {/* Channel count badge — total = third-party + official (if exists) */}
         {hasListings && (
           <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-[10px] font-medium text-neutral-700 shadow-sm">
-            {t('brand.channels', { count: String(listings.length + (officialListing || officialPrice != null ? 1 : 0)) })}
+            {t('brand.channels', { count: String(listings.length) })}
           </div>
         )}
       </div>

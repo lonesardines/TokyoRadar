@@ -6,13 +6,26 @@
 # 前端: http://localhost:5173
 # API:  http://localhost:8000
 # ============================================================
+#
+# Hot-reload strategy:
+#   docker-compose.dev.yml volume-mounts source into every container.
+#   uvicorn --reload / Celery / Vite HMR handle live code reloading.
+#   Tilt uses fall_back_on so ONLY Dockerfile/requirements trigger a
+#   full image rebuild. All other file changes are absorbed by
+#   live_update (no-op since volumes already sync the files).
+# ============================================================
 
-# 加载 docker-compose (base + dev 覆盖)
 docker_compose(
     ['./docker-compose.yml', './docker-compose.dev.yml'],
     env_file='.env',
     project_name='tokyoradar',
 )
+
+# Artifacts that should never enter the build context
+_build_ignore = [
+    '**/__pycache__', '**/*.pyc', '**/*.egg-info',
+    'sessions/', '.git/', '**/.DS_Store',
+]
 
 # ----------------------------------------------------------
 # Backend: FastAPI + uvicorn --reload
@@ -22,14 +35,10 @@ docker_build(
     context='.',
     dockerfile='./backend/Dockerfile',
     only=['./backend/', './shared/', './scraper/'],
+    ignore=_build_ignore,
     live_update=[
-        sync('./backend/', '/app/'),
-        sync('./shared/', '/shared/'),
-        sync('./scraper/', '/app/scraper/'),
-        run(
-            'pip install /shared && pip install -r requirements.txt',
-            trigger=['./backend/requirements.txt', './shared/pyproject.toml'],
-        ),
+        fall_back_on(['./backend/Dockerfile', './backend/requirements.txt', './shared/pyproject.toml']),
+        run('true'),  # no-op — volume mounts handle file syncing
     ],
 )
 
@@ -44,20 +53,17 @@ dc_resource('backend',
 )
 
 # ----------------------------------------------------------
-# Scraper Worker: Celery
+# Scraper Worker + MCP
 # ----------------------------------------------------------
 docker_build(
     'tokyoradar-scraper',
     context='.',
     dockerfile='./scraper/Dockerfile',
     only=['./scraper/', './shared/'],
+    ignore=_build_ignore,
     live_update=[
-        sync('./scraper/', '/app/scraper/'),
-        sync('./shared/', '/shared/'),
-        run(
-            'pip install /shared && pip install -r /app/scraper/requirements.txt',
-            trigger=['./scraper/requirements.txt', './shared/pyproject.toml'],
-        ),
+        fall_back_on(['./scraper/Dockerfile', './scraper/requirements.txt', './shared/pyproject.toml']),
+        run('true'),  # no-op — volume mounts handle file syncing
     ],
 )
 
@@ -66,9 +72,6 @@ dc_resource('scraper-worker',
     resource_deps=['db', 'redis'],
 )
 
-# ----------------------------------------------------------
-# Scraper MCP Server: exposes scraping tools via MCP
-# ----------------------------------------------------------
 dc_resource('scraper-mcp',
     labels=['workers'],
     resource_deps=['db', 'redis'],
@@ -76,20 +79,17 @@ dc_resource('scraper-mcp',
 )
 
 # ----------------------------------------------------------
-# Agent Worker: LLM orchestrator (pure MCP client)
+# Agent Worker
 # ----------------------------------------------------------
 docker_build(
     'tokyoradar-agent',
     context='.',
     dockerfile='./agent/Dockerfile',
     only=['./agent/', './shared/'],
+    ignore=_build_ignore,
     live_update=[
-        sync('./agent/', '/app/agent/'),
-        sync('./shared/', '/shared/'),
-        run(
-            'pip install /shared && pip install -r /app/agent-requirements.txt',
-            trigger=['./agent/requirements.txt', './shared/pyproject.toml'],
-        ),
+        fall_back_on(['./agent/Dockerfile', './agent/requirements.txt', './shared/pyproject.toml']),
+        run('true'),  # no-op — volume mounts handle file syncing
     ],
 )
 
@@ -99,18 +99,16 @@ dc_resource('agent-worker',
 )
 
 # ----------------------------------------------------------
-# Frontend: Vite dev server + HMR
+# Frontend: Vite HMR
 # ----------------------------------------------------------
 docker_build(
     'tokyoradar-frontend-dev',
     context='./frontend',
     dockerfile='./frontend/Dockerfile.dev',
-    only=['./'],
+    ignore=['node_modules/', 'dist/', '.vite/'],
     live_update=[
-        sync('./frontend/src/', '/app/src/'),
-        sync('./frontend/public/', '/app/public/'),
-        sync('./frontend/index.html', '/app/index.html'),
-        run('npm install', trigger=['./frontend/package.json']),
+        fall_back_on(['./frontend/Dockerfile.dev', './frontend/package.json', './frontend/package-lock.json']),
+        run('true'),  # no-op — volume mounts handle file syncing
     ],
 )
 
@@ -121,13 +119,13 @@ dc_resource('frontend',
 )
 
 # ----------------------------------------------------------
-# 基础设施
+# Infrastructure
 # ----------------------------------------------------------
 dc_resource('db', labels=['infra'])
 dc_resource('redis', labels=['infra'])
 
 # ----------------------------------------------------------
-# 手动任务 (Tilt 面板中点击按钮触发)
+# Manual tasks
 # ----------------------------------------------------------
 local_resource('migrate',
     cmd='docker compose -p tokyoradar exec -T backend sh -c "cd /migrations && alembic upgrade head"',

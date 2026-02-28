@@ -77,10 +77,13 @@ class AgentLoop:
         self.dry_run = dry_run
 
         if replayer is None:
-            self.client = OpenAI(
-                api_key=api_key or settings.DASHSCOPE_API_KEY,
-                base_url=base_url or settings.DASHSCOPE_BASE_URL,
-            )
+            if model.startswith("gemini-"):
+                _api_key = api_key or settings.GEMINI_API_KEY
+                _base_url = base_url or settings.GEMINI_BASE_URL
+            else:
+                _api_key = api_key or settings.DASHSCOPE_API_KEY
+                _base_url = base_url or settings.DASHSCOPE_BASE_URL
+            self.client = OpenAI(api_key=_api_key, base_url=_base_url)
         else:
             self.client = None  # replay mode — no API calls
 
@@ -282,8 +285,9 @@ class AgentLoop:
         if reasoning:
             msg["reasoning_content"] = reasoning
         if choice.message.tool_calls:
-            msg["tool_calls"] = [
-                {
+            msg["tool_calls"] = []
+            for tc in choice.message.tool_calls:
+                tc_dict: dict[str, Any] = {
                     "id": tc.id,
                     "type": "function",
                     "function": {
@@ -291,8 +295,11 @@ class AgentLoop:
                         "arguments": tc.function.arguments,
                     },
                 }
-                for tc in choice.message.tool_calls
-            ]
+                # Preserve Gemini thought_signature (extra_content) for multi-turn tool use
+                extra_content = getattr(tc, "extra_content", None)
+                if extra_content:
+                    tc_dict["extra_content"] = extra_content
+                msg["tool_calls"].append(tc_dict)
         return msg
 
 
@@ -365,8 +372,9 @@ def _response_to_dict(response) -> dict:
     if reasoning:
         result["reasoning_content"] = reasoning
     if choice.message.tool_calls:
-        result["tool_calls"] = [
-            {
+        tc_list = []
+        for tc in choice.message.tool_calls:
+            tc_dict: dict[str, Any] = {
                 "id": tc.id,
                 "type": "function",
                 "function": {
@@ -374,8 +382,11 @@ def _response_to_dict(response) -> dict:
                     "arguments": tc.function.arguments,
                 },
             }
-            for tc in choice.message.tool_calls
-        ]
+            extra_content = getattr(tc, "extra_content", None)
+            if extra_content:
+                tc_dict["extra_content"] = extra_content
+            tc_list.append(tc_dict)
+        result["tool_calls"] = tc_list
     return result
 
 
